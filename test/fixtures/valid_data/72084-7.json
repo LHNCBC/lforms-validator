@@ -1,0 +1,479 @@
+{
+  "type": "LOINC",
+  "code": "72084-7",
+  "name": "Fluid and weight panel",
+  "items": [
+    {
+      "questionCode": "72083-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Left ventricular hypertrophy change",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72082-1",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Constant dialysate sodium prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72081-3",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date of sodium education",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72080-5",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Did prescribed dialysate sodium concentration exceed 138 mEq/L for any dialysis session during the Mo",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72079-7",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Dry weight order present",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72078-9",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date of echocardiogram",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72077-1",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Sodium restriction education received",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72076-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Blood pressure home reading",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA6626-1",
+          "text": "Normal",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9193-9",
+          "text": "High",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9194-7",
+          "text": "Low",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72075-5",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Did patient provide the home blood pressure values to the dialysis unit",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72074-8",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date last formal post dialysis weight",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72073-0",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Post-dialysis target weight for session prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72072-2",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Breath sounds",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA12748-2",
+          "text": "Abnormal",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6626-1",
+          "text": "Normal",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72071-4",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Edema present",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72070-6",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Left ventricular hypertrophy",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72069-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Sodium profiling-modeling prescribed for any dialysis sessions in the reporting Mo",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    }
+  ]
+}

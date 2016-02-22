@@ -1,0 +1,1490 @@
+{
+  "type": "LOINC",
+  "code": "68899-4",
+  "name": "Core behavioral and psychosocial data elements for the electronic health record",
+  "items": [
+    {
+      "questionCode": "68503-2",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How would you rate your ability to speak and understand English OR  How well do you speak English?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA15367-8",
+          "text": "Very well",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18365-9",
+          "text": "Well",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18366-7",
+          "text": "Not well",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6568-5",
+          "text": "Not at all",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68504-0",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "What language do you feel most comfortable speaking with your doctor or nurse?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68505-7",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "What is your current occupational status?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA15276-1",
+          "text": "Student",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17956-6",
+          "text": "Unemployed",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17959-0",
+          "text": "Homemaker",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17990-5",
+          "text": "Employed",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17991-3",
+          "text": "Retired",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17992-1",
+          "text": "Part-time",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17993-9",
+          "text": "Full-time",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17994-7",
+          "text": "Disabled",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68506-5",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "What is the highest grade or level of schooling you completed?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68507-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Did you ever serve on active duty in the armed forces of the U.S.?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68508-1",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How many children under the age of 18 live in your household?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68509-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Over the past 2 weeks have you not been able to stop or control worrying",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18938-3",
+          "text": "More days than not",
+          "score": 2,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6568-5",
+          "text": "Not at all",
+          "score": 0,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6569-3",
+          "text": "Several days",
+          "score": 1,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6571-9",
+          "text": "Nearly every day",
+          "score": 3,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68510-7",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Over the past 7 days, how many times a week did you eat fast food or snacks or pizza?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68511-5",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Over the past 7 days, how many servings of fruits-vegetables did you eat each day?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68512-3",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Over the past 7 days, how many soda and sweetened drinks, regular, not diet, did you drink each day?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68513-1",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How many days in the past week did you miss taking one or more of your medications?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68514-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "When you fail to take doses of your medications, is this because?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA17984-8",
+          "text": "You forget to take your medicine",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17985-5",
+          "text": "Your medicine is costly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17986-3",
+          "text": "You are concerned about side effects",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17987-1",
+          "text": "You don’t think the medicine is helping you",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17988-9",
+          "text": "You don’t understand why you need this medicine",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17989-7",
+          "text": "You don’t take this medication because you don’t want to",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68515-6",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How many days of moderate to strenuous exercise , like a brisk walk, did you do in the last 7 days?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68516-4",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68517-2",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How many times in the past year have you have X or more drinks in a day?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68518-0",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How often do you have a drink containing alcohol?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18926-8",
+          "text": "Monthly or less",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18927-6",
+          "text": "2-4 times a month",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18928-4",
+          "text": "2-3 times a week",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18929-2",
+          "text": "4 or more times a week",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6270-8",
+          "text": "Never",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68519-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How many standard drinks containing alcohol do you have on a typical day?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA15694-5",
+          "text": "1 or 2",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA15695-2",
+          "text": "3 or 4",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18930-0",
+          "text": "5 or 6",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18931-8",
+          "text": "7 to 9",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18932-6",
+          "text": "10 or more",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68520-6",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How often do you have 6 or more drinks on 1 occasion?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA14435-4",
+          "text": "Daily",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18876-5",
+          "text": "Monthly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18891-4",
+          "text": "Weekly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18933-4",
+          "text": "Less than monthly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18934-2",
+          "text": "Daily or almost daily",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6270-8",
+          "text": "Never",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68521-4",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How much stress have you been experiencing in the past week, including today?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA10137-0",
+          "text": "5",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10138-8",
+          "text": "6",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10139-6",
+          "text": "7",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10140-4",
+          "text": "8",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10141-2",
+          "text": "9",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18936-7",
+          "text": "0 - no stress",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18937-5",
+          "text": "10 - extreme stress",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6112-2",
+          "text": "1",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6113-0",
+          "text": "2",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6114-8",
+          "text": "3",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6115-5",
+          "text": "4",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68522-2",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "To what extent did the following common sources contributed to your overall stress in the last week?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA13902-4",
+          "text": "Quite a bit",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA13909-9",
+          "text": "Somewhat",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA13947-9",
+          "text": "Very little",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18935-9",
+          "text": "Greatly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6568-5",
+          "text": "Not at all",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68523-0",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Sources of stress",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA16501-1",
+          "text": "Work",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17981-4",
+          "text": "Financial",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17982-2",
+          "text": "Social/family",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17983-0",
+          "text": "Health",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68524-8",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How many times in the past year have you used an illegal drug or used a prescription medication for non-medical reasons?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68525-5",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "In the past year, have you used drugs other than those required for medical reasons?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68526-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Do you abuse more than one drug at a time?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68527-1",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Are you always able to stop using drugs when you want to?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68528-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Have you had blackouts or flashbacks as a result for drug use?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68529-7",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Do you ever feel bad or guilty about your drug use?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68530-5",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Does your spouse (or parent) ever complain about your involvement with drugs?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68531-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Have you neglected your family because of your use of drugs?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68532-1",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Have you engaged in illegal activities in order to obtain drugs?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68533-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68534-7",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Have you had medical problems as a result of your drug use?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68535-4",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Have you used tobacco in the last 30 days?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68536-2",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Have you used smokeless tobacco product in the last 30 days?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68537-0",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Would you be interested in quitting tobacco use within the next few weeks?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68538-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Did you provide brief counseling/coaching to quit?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68539-6",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Did you prescribe or recommend that the patient to use one of the seven FDA-approved medication for tobacco cessation?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68540-4",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Did you refer the patient to your State's Tobacco Quitline (1-800-QUIT-NOW)?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    }
+  ]
+}

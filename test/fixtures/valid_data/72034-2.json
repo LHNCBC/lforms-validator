@@ -1,0 +1,419 @@
+{
+  "type": "LOINC",
+  "code": "72034-2",
+  "name": "Vitamin D panel",
+  "items": [
+    {
+      "questionCode": "72033-4",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Non-oral vitamin D analog prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72032-6",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Type non-oral vitamin D analog prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18878-1",
+          "text": "Calcijex (Calcitriol)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18879-9",
+          "text": "Hectorol (Doxercalciferol)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18880-7",
+          "text": "Zemplar (Paricalcitol)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "65818-7",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Medication Dose-mCnc",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71468-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Medication route",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18623-1",
+          "text": "Intravenous push",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9367-9",
+          "text": "Oral",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9429-7",
+          "text": "Intramuscular",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9437-0",
+          "text": "Intravenous",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9451-1",
+          "text": "Subcutaneous",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72031-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Oral vitamin D analog prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72030-0",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Type oral vitamin D analog prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18879-9",
+          "text": "Hectorol (Doxercalciferol)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18880-7",
+          "text": "Zemplar (Paricalcitol)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18881-5",
+          "text": "Calderol",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18882-3",
+          "text": "Delta D3",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18883-1",
+          "text": "DHT Intensol",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18884-9",
+          "text": "DHT",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18885-6",
+          "text": "Drisdol",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18887-2",
+          "text": "Rocaltrol",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18888-0",
+          "text": "Vitamin D3",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18889-8",
+          "text": "Vitamin D2",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "65818-7",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Medication Dose-mCnc",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71468-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Medication route",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18623-1",
+          "text": "Intravenous push",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9367-9",
+          "text": "Oral",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9429-7",
+          "text": "Intramuscular",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9437-0",
+          "text": "Intravenous",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9451-1",
+          "text": "Subcutaneous",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "51953-8",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Collect Date Bld",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "type": "LOINC",
+  "code": "35088-4",
+  "name": "Glasgow Coma Score",
+  "items": [
+    {
+      "questionCode": "9267-6",
+      "question": "Glasgow coma score eye opening",
+      "answers": [
+        {
+          "text": "No eye opening -- 1",
+          "code": "LA6553-7",
+          "score": 1
+        },
+        {
+          "text": "Eye opening to pain -- 2",
+          "code": "LA6554-5",
+          "score": 2
+        },
+        {
+          "text": "Eye opening to verbal command -- 3",
+          "code": "LA6555-2",
+          "score": 3
+        },
+        {
+          "text": "Eyes open spontaneously -- 4",
+          "code": "LA6556-0",
+          "score": 4
+        }
+      ],
+      "dataType": "CNE",
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "9268-4",
+      "question": "Glasgow coma score motor",
+      "answers": [
+        {
+          "text": "No motor response -- 1",
+          "code": "LA6562-8",
+          "score": 1
+        },
+        {
+          "text": "Extension to pain -- 2",
+          "code": "LA6563-6",
+          "score": 2
+        },
+        {
+          "text": "Flexion to pain -- 3",
+          "code": "LA6564-4",
+          "score": 3
+        },
+        {
+          "text": "Withdrawl from pain -- 4",
+          "code": "LA6565-1",
+          "score": 4
+        },
+        {
+          "text": "Localising pain -- 5",
+          "code": "LA6566-9",
+          "score": 5
+        },
+        {
+          "text": "Obeys commands -- 6",
+          "code": "LA6567-7",
+          "score": 6
+        }
+      ],
+      "dataType": "CNE",
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "9270-0",
+      "question": "Glasgow coma score verbal",
+      "answers": [
+        {
+          "text": "No verbal response -- 1",
+          "code": "LA6557-8",
+          "score": 1
+        },
+        {
+          "text": "Incomprehensible sounds -- 2",
+          "code": "LA6558-6",
+          "score": 2
+        },
+        {
+          "text": "Inappropriate words -- 3",
+          "code": "LA6559-4",
+          "score": 3
+        },
+        {
+          "text": "Confused -- 4",
+          "code": "LA6560-2",
+          "score": 4
+        },
+        {
+          "text": "Oriented -- 5",
+          "code": "LA6561-0",
+          "score": 5
+        }
+      ],
+      "dataType": "CNE",
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "formula": {
+        "name": "SCORE",
+        "value": []
+      },
+      "questionCode": "9269-2",
+      "question": "Glasgow coma score total",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "type": "LOINC",
+  "code": "55418-8",
+  "name": "Weight & height tracking panel",
+  "items": [
+    {
+      "questionCode": "29463-7",
+      "question": "My body weight",
+      "dataType": "NM",
+      "units": [
+        {
+          "name": "pounds",
+          "code": 2776
+        },
+        {
+          "name": "kilograms",
+          "code": 5770
+        }
+      ],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "8352-7",
+      "question": "Clothing worn during measure",
+      "answers": [
+        {
+          "text": "Underwear or less",
+          "code": "LA11871-3"
+        },
+        {
+          "text": "Street clothes, no shoes",
+          "code": "LA11872-1"
+        },
+        {
+          "text": "Street clothes & shoes",
+          "code": "LA11873-9"
+        }
+      ],
+      "dataType": "CNE",
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "8302-2",
+      "question": "My body height",
+      "dataType": "NM",
+      "units": [
+        {
+          "name": "inches",
+          "code": 5564
+        },
+        {
+          "name": "feet",
+          "code": 5827
+        },
+        {
+          "name": "centimeters",
+          "code": 5828
+        },
+        {
+          "name": "meters",
+          "code": 5829
+        }
+      ],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "formula": {
+        "name": "BMI",
+        "value": [
+          "29463-7",
+          "8302-2"
+        ]
+      },
+      "questionCode": "39156-5",
+      "question": "Body mass index (BMI) [Ratio]",
+      "dataType": null,
+      "units": [
+        {
+          "name": "kg/m2",
+          "code": 5790
+        }
+      ],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "8361-8",
+      "question": "Body position with respect to gravity",
+      "answers": [
+        {
+          "text": "Sitting",
+          "code": "LA11868-9"
+        },
+        {
+          "text": "Lying",
+          "code": "LA11869-7"
+        },
+        {
+          "text": "Standing",
+          "code": "LA11870-5"
+        }
+      ],
+      "dataType": "CNE",
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    }
+  ]
+}
