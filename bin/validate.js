@@ -5,25 +5,17 @@
  */
 
 var url = require('url');
-//var http_request = require('request');
 var http = require('http');
 var fs = require('fs');
-var LFormsValidator = require('./lforms-validator');
+var LFormsValidator = require('./../lib/lforms-validator');
 var jsonpath = require('JSONPath');
-var lodash = require('lodash');
 
 
 /*
  * 
  * @returns {undefined}
  */
-function process_input() {
-/*  
-  process.on('uncaughtException', function(error) {
-//      console.log('uncaughtException! '+error.toString());
-//      process.exit(1);
-  });
-*/  
+function processInput() {
   var jpath = null;
   var inputfiles = [];
   var inputstream = null;
@@ -34,16 +26,16 @@ function process_input() {
     return;
   }
     
-  var validation_options = {
+  var validationOptions = {
     verbose: false,
     outStream: process.stdout,
-    inputString: false
+    isInputString: false
   };
 
   var ind = process.argv.indexOf('-v');
   if (ind >= 0) {
     process.argv.splice(ind, 1);
-    validation_options.verbose = true;
+    validationOptions.verbose = true;
   }
 
   var ind = process.argv.indexOf('-p');
@@ -64,7 +56,7 @@ function process_input() {
   if(jpath !== null) {
     // Extract jason path elements, create a readable stream
     // out of them and pass it to validation.
-    var json =  read_json(input);
+    var json =  readJson(input);
     var res = jsonpath.eval(json, jpath);
     var s = new require('stream').Readable();
     s._read = function() {};
@@ -78,32 +70,32 @@ function process_input() {
   if (inputfiles && inputfiles.length > 0) {
     var u = url.parse(inputfiles[0]);
     if (u && (u.protocol === 'http:' || u.protocol === 'https:')) {
-      validation_options.source = inputfiles[0];
-      validation.validate(inputfiles[0], validation_options);
-      var validation = new LFormsValidator(inputfiles[0], validation_options);
-      run_validation(validation);
+      validationOptions.source = inputfiles[0];
+      validation.validate(inputfiles[0], validationOptions);
+      var validation = new LFormsValidator(inputfiles[0], validationOptions);
+      runValidation(validation);
       return;
     }
     else if (fs.statSync(inputfiles[0]).isDirectory() === true) {
       // list out all files in the directory
       var dir = inputfiles[0];
       inputfiles = fs.readdirSync(dir);
-      inputfiles = lodash.map(inputfiles, function (e) {
+      inputfiles = inputfiles.map(function (e) {
         return dir + '/' + e;
       });
     }
     // Command line filelist or list from directory.
     inputfiles.forEach(function (f) {
-      validation_options.source = f;
-      var validation = new LFormsValidator(fs.createReadStream(f), validation_options);
-      run_validation(validation);
+      validationOptions.source = f;
+      var validation = new LFormsValidator(fs.createReadStream(f), validationOptions);
+      runValidation(validation);
     });
   }
   else {
     if(inputstream) {
       // From input stream
-      var validation = new LFormsValidator(inputstream, validation_options);
-      run_validation(validation);
+      var validation = new LFormsValidator(inputstream, validationOptions);
+      runValidation(validation);
     }
     else {
       usage();
@@ -111,9 +103,12 @@ function process_input() {
   }
 };
 
-function run_validation(validationObj) {
+function runValidation(validationObj) {
   var d = require('domain').create();
   d.on('error', function(err){
+    if(validationObj.verbose) {
+      console.log(err.stack);
+    }
     console.log(err.message);
   });
 
@@ -124,14 +119,14 @@ function run_validation(validationObj) {
 /*
  * 
  */
-function read_json(input) {
-  return JSON.parse(get_content(input));  
+function readJson(input) {
+  return JSON.parse(getContent(input));
 }
 
 /*
  * 
  */
-function get_content(input) {
+function getContent(input) {
   var content = null;
   
   if(!(typeof(input) === 'string')) {
@@ -166,6 +161,6 @@ function usage() {
 /*
  * Main entry point
  */
-process_input();
+processInput();
 
 

@@ -4,6 +4,7 @@
   "name": "Heart ultrasound (echocardiogram)",
   "items": [
     {
+      "comment": "Test comments",
       "questionCode": "18010-9",
       "question": "Aorta Diameter by US",
       "dataType": "NM",
