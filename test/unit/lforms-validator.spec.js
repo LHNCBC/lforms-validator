@@ -22,7 +22,7 @@ describe('Should validate', function() {
 
   it('obxTableColumns', function() {
     expect(function() {
-      validator.validateDucktype(types.ObxTableColumns, helper.formBuilderForm.templateOptions.obxTableColumns[0], '');
+      validator.validateDucktype(types.ObxTableColumn, helper.formBuilderForm.templateOptions.obxTableColumns[0], '');
     }).not.toThrow();
   });
 

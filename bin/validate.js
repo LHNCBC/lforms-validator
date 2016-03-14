@@ -1,22 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+A command line application to use lforms-validator to input files/directories/urls etc.
  */
-
 var url = require('url');
 var http = require('http');
 var fs = require('fs');
 var LFormsValidator = require('./../lib/lforms-validator');
-var jsonpath = require('JSONPath');
 
 
-/*
- * 
+/**
+ * Program entry. Processes command line inputs and run validation.
+ *
  * @returns {undefined}
  */
 function processInput() {
-  var jpath = null;
   var inputfiles = [];
   var inputstream = null;
   if ((process.argv.indexOf('--help') >= 0) ||
@@ -38,11 +34,6 @@ function processInput() {
     validationOptions.verbose = true;
   }
 
-  var ind = process.argv.indexOf('-p');
-  if (ind >= 0) {
-    jpath = process.argv.splice(ind, 2)[1];
-  }
-
   while (process.argv.length >= 3 && process.argv[2] !== '-') {
     inputfiles.push(process.argv[2]);
     process.argv.splice(2, 1);
@@ -53,20 +44,7 @@ function processInput() {
     inputstream = process.stdin;
   }
 
-  if(jpath !== null) {
-    // Extract jason path elements, create a readable stream
-    // out of them and pass it to validation.
-    var json =  readJson(input);
-    var res = jsonpath.eval(json, jpath);
-    var s = new require('stream').Readable();
-    s._read = function() {};
-    s.push(JSON.stringify(res));
-    s.push(null);
-    s.resume();
-    inputstream = s;
-  }
-  
-  // Input can be a http(s) url, or input stream
+  // Input can be a http(s) url, file(s), directory or input stream
   if (inputfiles && inputfiles.length > 0) {
     var u = url.parse(inputfiles[0]);
     if (u && (u.protocol === 'http:' || u.protocol === 'https:')) {
@@ -103,6 +81,15 @@ function processInput() {
   }
 };
 
+
+/**
+ * Run validation on each object. Each invocation creates and sets up a domain to
+ * facilitate simultaneous running of multiple validations.
+ *
+ * multiple validations
+ *
+ * @param {Object} validationObj - LFormsValidator object with its input and options set.
+ */
 function runValidation(validationObj) {
   var d = require('domain').create();
   d.on('error', function(err){
@@ -116,49 +103,23 @@ function runValidation(validationObj) {
   validationObj.validate();
 }
 
-/*
- * 
- */
-function readJson(input) {
-  return JSON.parse(getContent(input));
-}
 
-/*
- * 
+/**
+ * Usage clause
  */
-function getContent(input) {
-  var content = null;
-  
-  if(!(typeof(input) === 'string')) {
-    content = fs.readFileSync(input.fd);
-  }
-  else { 
-    var u = url.parse(input);
-    if (u !== null) {
-      if (u.protocol === null ||
-              u.protocol === 'file') {
-        content = fs.readFileSync(u.pathname, {encoding: 'utf-8'});
-      }
-      else {
-        http.get(input, function(res) {
-          if (res.statusCode === 200) {
-            res.on('data', function(chunk) {
-              content =+ chunk;
-            });
-          }
-        }).on('error', function(error) {
-            throw new Error(error.toString());
-        });
-      }
-    }
-  }
-  return content;
-}
-
 function usage() {
-  console.log('Usage: ' + process.argv[0] + ' ' + process.argv[1] + ' <input file/url>');
+  console.log('Usage: ' + process.argv[0] + ' ' + process.argv[1] + ' [options...] <input file/url>');
+  console.log('Options:');
+  console.log('  -h/--help\tThis help message');
+  console.log('  -v\t\tVerbose output');
+  console.log('');
+  console.log('\<input file/url\>\tSpecify location of lforms json resource. The valid inputs are');
+  console.log('                \tan http(s) url, file path, or directory path');
+  console.log('                \tYou may also use \'-\' to read from standard input.');
 }
-/*
+
+
+/**
  * Main entry point
  */
 processInput();
