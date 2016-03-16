@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 
   // Configurable paths for the application
   var appConfig = {
-    app: require('./bower.json').appPath || __dirname
+    app: __dirname
   };
 
   // Define the configuration for all the tasks
@@ -32,25 +32,6 @@ module.exports = function (grunt) {
     nsp: {
       package: grunt.file.readJSON('./package.json'),
       shrinkwrap: grunt.file.readJSON('./npm-shrinkwrap.json')
-    },
-
-
-    // Watches files for changes and runs tasks based on the changed files
-    watch: {
-      bower: {
-        files: ['bower.json']
-      },
-      js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all']
-      },
-      jsTest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['newer:jshint:test']
-      },
-      gruntfile: {
-        files: ['Gruntfile.js']
-      }
     },
 
     jasmine_nodejs: {
@@ -86,33 +67,6 @@ module.exports = function (grunt) {
           "test/unit/**"
         ]
       }
-    },
-
-    // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-      },
-      all: {
-        src: [
-          'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
-        ]
-      },
-      test: {
-        options: {
-          jshintrc: 'test/.jshintrc'
-        },
-        src: ['test/spec/{,*/}*.js']
-      }
-    },
-
-    // Add vendor prefixed styles
-    autoprefixer: {
-      options: {
-        browsers: ['last 1 version']
-      }
     }
   });
 
@@ -123,7 +77,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
     'test'
   ]);
 };
