@@ -46,28 +46,31 @@ function processInput() {
 
   // Input can be a http(s) url, file(s), directory or input stream
   if (inputfiles && inputfiles.length > 0) {
+    // Handle url
     var u = url.parse(inputfiles[0]);
     if (u && (u.protocol === 'http:' || u.protocol === 'https:')) {
       validationOptions.source = inputfiles[0];
       validation.validate(inputfiles[0], validationOptions);
       var validation = new LFormsValidator(inputfiles[0], validationOptions);
       runValidation(validation);
-      return;
     }
-    else if (fs.statSync(inputfiles[0]).isDirectory() === true) {
-      // list out all files in the directory
-      var dir = inputfiles[0];
-      inputfiles = fs.readdirSync(dir);
-      inputfiles = inputfiles.map(function (e) {
-        return dir + '/' + e;
+    else {
+      // Handle files or directory
+      if (fs.statSync(inputfiles[0]).isDirectory() === true) {
+        // list out all files in the directory
+        var dir = inputfiles[0];
+        inputfiles = fs.readdirSync(dir);
+        inputfiles = inputfiles.map(function (e) {
+          return dir + '/' + e;
+        });
+      }
+      // Command line filelist or list from directory.
+      inputfiles.forEach(function (f) {
+        validationOptions.source = f;
+        var validation = new LFormsValidator(fs.createReadStream(f), validationOptions);
+        runValidation(validation);
       });
     }
-    // Command line filelist or list from directory.
-    inputfiles.forEach(function (f) {
-      validationOptions.source = f;
-      var validation = new LFormsValidator(fs.createReadStream(f), validationOptions);
-      runValidation(validation);
-    });
   }
   else {
     if(inputstream) {
@@ -79,7 +82,7 @@ function processInput() {
       usage();
     }
   }
-};
+}
 
 
 /**
