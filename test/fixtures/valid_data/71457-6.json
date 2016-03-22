@@ -1,0 +1,241 @@
+{
+  "type": "LOINC",
+  "code": "71457-6",
+  "name": "Erythropoiesis-stimulating agent panel",
+  "items": [
+    {
+      "questionCode": "71458-4",
+      "localQuestionCode": "ESRD.RQMT_305",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Was Erythropoiesis-Stimulating Agent Prescribed?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71464-2",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date first prescribed",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71465-9",
+      "localQuestionCode": "ESRD.RQMT_306",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date prescription changed",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71466-7",
+      "localQuestionCode": "ESRD.RQMT_975",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date prescription stopped",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71467-5",
+      "localQuestionCode": "ESRD.RQMT_978",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Erythropoiesis-stimulating agent prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18620-7",
+          "text": "Epoetin Alfa",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18621-5",
+          "text": "Epoetin Beta",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18622-3",
+          "text": "Darbepoetin Alfa",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "65818-7",
+      "localQuestionCode": "RQMT_977",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Medication dose",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71468-3",
+      "localQuestionCode": "ESRD.RQMT_978",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Medication route",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18623-1",
+          "text": "Intravenous push",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9367-9",
+          "text": "Oral",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9429-7",
+          "text": "Intramuscular",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9437-0",
+          "text": "Intravenous",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9451-1",
+          "text": "Subcutaneous",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    }
+  ]
+}

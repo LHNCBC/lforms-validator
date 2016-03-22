@@ -1,0 +1,145 @@
+{
+  "type": "LOINC",
+  "code": "34552-0",
+  "name": "Heart ultrasound (echocardiogram)",
+  "items": [
+    {
+      "comment": "Test comments",
+      "questionCode": "18010-9",
+      "question": "Aorta Diameter by US",
+      "dataType": "NM",
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "18018-2",
+      "question": "Left ventricular outflow tract Diameter by US",
+      "dataType": "NM",
+      "units": [
+        {
+          "name": "centimeters",
+          "code": 1172
+        }
+      ],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "20307-5",
+      "question": "Right ventricular outflow tract Diameter by US 2D",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "29468-6",
+      "question": "Left atrial Diameter anterior-posterior systole by US 2D",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "18083-6",
+      "question": "Left ventricular Internal diameter minor axis diastole by US 2D",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "18085-1",
+      "question": "Left ventricular Internal diameter minor axis systole by US 2D",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "29442-1",
+      "question": "Left ventricular posterior wall Thickness diastole by US 2D",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "29430-6",
+      "question": "Interventricular septum Thickness diastole by US 2D",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "8806-2",
+      "question": "Left ventricular Ejection fraction by 2D echo",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "29434-8",
+      "question": "Left ventricular Fractional shortening minor axis by US 2D",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    },
+    {
+      "questionCode": "18147-9",
+      "question": "Central cardiovascular Study observation by US",
+      "dataType": null,
+      "units": [],
+      "header": false,
+      "parentQuestionCode": null,
+      "answerCardinality": {
+        "min": "1",
+        "max": "1"
+      }
+    }
+  ]
+}

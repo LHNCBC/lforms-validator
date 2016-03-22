@@ -1,0 +1,870 @@
+{
+  "type": "LOINC",
+  "code": "72055-7",
+  "name": "Vascular access panel",
+  "items": [
+    {
+      "questionCode": "72054-0",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date change of dialysis access type",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72053-2",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date arteriovenous fistula creation",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68449-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Is maturing AVF present?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA17835-2",
+          "text": "Yes, present but not mature",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17836-0",
+          "text": "No, access not present, or present and not maturing",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72052-4",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date catheter placement",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72051-6",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date catheter removal",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72050-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Dialysis access",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18895-5",
+          "text": "Arteriovenous fistula only (with 2 needles)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18896-3",
+          "text": "Arteriovenous fistula combined with an AV graft",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18897-1",
+          "text": "Arteriovenous fistula combined with a catheter",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18898-9",
+          "text": "Arteriovenous graft only (with 2 needles)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18899-7",
+          "text": "Arteriovenous graft combined with a catheter",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18900-3",
+          "text": "Catheter only",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18901-1",
+          "text": "Port access only",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4659-4",
+          "text": "Other, Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68449-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Is maturing AVF present?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA17835-2",
+          "text": "Yes, present but not mature",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17836-0",
+          "text": "No, access not present, or present and not maturing",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68450-6",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Is maturing graft present?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA17835-2",
+          "text": "Yes, present but not mature",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17836-0",
+          "text": "No, access not present, or present and not maturing",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72049-0",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date dialysis session",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72048-2",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date arteriovenous fistula usable",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72047-4",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Arteriovenous fistula status",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA16666-2",
+          "text": "Active",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18632-2",
+          "text": "Inactive",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18892-2",
+          "text": "Not yet present",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18893-0",
+          "text": "Created",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18894-8",
+          "text": "Removed",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72046-6",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Arteriovenous graft status",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA16666-2",
+          "text": "Active",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18632-2",
+          "text": "Inactive",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18892-2",
+          "text": "Not yet present",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18893-0",
+          "text": "Created",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18894-8",
+          "text": "Removed",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72045-8",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Physical examination dialysis access performed prior, during and after cannulation",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72044-1",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Dialysis access physical exam frequency",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18876-5",
+          "text": "Monthly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18890-6",
+          "text": "At each treatment",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18891-4",
+          "text": "Weekly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72043-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Measurement of arterial pre-pump pressure performed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72042-5",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How often was arterial pre-pump pressure measured",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18876-5",
+          "text": "Monthly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18890-6",
+          "text": "At each treatment",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18891-4",
+          "text": "Weekly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72041-7",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Testing of arteriovenous graft for access dysfunction performed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72040-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Testing of arteriovenous graft performed using static venous pressure",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72039-1",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "How often was static venous pressure measured",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72038-3",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Arteriovenous graft assessed using doppler",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72037-5",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Arteriovenous graft assessed frequency",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18875-7",
+          "text": "At least every two weeks",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18876-5",
+          "text": "Monthly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18877-3",
+          "text": "Quarterly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72036-7",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Arteriovenous graft assessed using intra-access flow",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72035-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Arteriovenous graft assessed frequency",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18875-7",
+          "text": "At least every two weeks",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18876-5",
+          "text": "Monthly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18877-3",
+          "text": "Quarterly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    }
+  ]
+}

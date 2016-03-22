@@ -7,7 +7,8 @@
 
 
 # Use the globally installed node and its modules
-set LFORMS_NODE=node-v0.10.42-linux-x64
+#set LFORMS_NODE=node-v0.10.36_lforms.v2
+set LFORMS_NODE=node-v4.2.1_lforms.v1
 # Set path
 set path = (/depot/packages/${LFORMS_NODE}/bin /bin /usr/local/bin /usr/bin /usr/sbin /sbin /etc)
 
@@ -27,27 +28,5 @@ while ( "$dir" != '/' )
 end
 if ( "$node_modules_dir" != '') then
   set path = ($path $node_modules_dir/.bin)
-endif
-
-
-# Set editor for git
-setenv EDITOR /usr/bin/vim
-
-# We setup a couple things only if in an interactive shell
-if ($?prompt) then
-
-  # Maybe needed for CDE
-  #stty erase ^H
-  stty erase ^\?
-
-  # Environment settings
-  umask 022
-  set filec
-  set history=( 2000 "%h %Y-%W-%D %T %R\n" )
-  set host = `uname -n`
-  #set nobeep
-  #set prompt = "${user}@${host}[\!]-> "
-  set type
-  unset autologout
 endif
 

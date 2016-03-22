@@ -1,0 +1,257 @@
+{
+  "type": "LOINC",
+  "code": "72068-0",
+  "name": "Iron panel",
+  "items": [
+    {
+      "questionCode": "72067-2",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Iron prescription current",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "71465-9",
+      "localQuestionCode": "ESRD.RQMT_306",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date prescription changed",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72066-4",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Intravenous iron prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72065-6",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Type intravenous iron prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18912-8",
+          "text": "Iron dextran (Dexferrum, Infed)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18913-6",
+          "text": "Sodium ferric gluconate (Ferrlecit)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18914-4",
+          "text": "Iron sucrose (Venofer)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "65818-7",
+      "localQuestionCode": null,
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Medication Dose-mCnc",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72064-9",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Oral iron prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72063-1",
+      "localQuestionCode": null,
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Type oral iron prescribed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18909-4",
+          "text": "Ferrous fumarate (Feostat, Femiron)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18910-2",
+          "text": "Ferrous sulfate (Feosol, FerIron)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18911-0",
+          "text": "Ferrous gluconate (Ferate, Fergon, Ferralet, Simron)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    }
+  ]
+}

@@ -1,0 +1,1928 @@
+{
+  "type": "LOINC",
+  "code": "68998-4",
+  "name": "U.S. standard certificate of live birth - 2003 revision",
+  "items": [
+    {
+      "questionCode": "73766-8",
+      "localQuestionCode": "LiveBirth_26",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Place where birth occurred",
+      "answers": [
+        {
+          "label": "2",
+          "code": "LA20032-1",
+          "text": "Free-standing birthing center",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20033-9",
+          "text": "Home birth",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "6",
+          "code": "LA20034-7",
+          "text": "Clinic/doctor's office",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "9",
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "1",
+          "code": "LA6218-7",
+          "text": "Hospital",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "7",
+          "code": "LA6310-2",
+          "text": "Other (specify)",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73765-0",
+      "localQuestionCode": "LiveBirth_26c",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Planned to deliver at home",
+      "answers": [
+        {
+          "label": "4",
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "3",
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "5",
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73764-3",
+      "localQuestionCode": "LiveBirth_27c",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Attendant's title",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20036-2",
+          "text": "MD",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20037-0",
+          "text": "DO",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20038-8",
+          "text": "CNM/CM",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20053-7",
+          "text": "Other midwife",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6310-2",
+          "text": "Other (specify)",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73763-5",
+      "localQuestionCode": "LiveBirth_28",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Mother transferred for maternal medical or fetal indications for delivery",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73777-5",
+      "localQuestionCode": "LiveBirth_28",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Name of facility mother transferred from",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "69044-6",
+      "localQuestionCode": "LiveBirth_29a",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date of first prenatal care visit",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73776-7",
+      "localQuestionCode": "LiveBirth_29aa",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "No prenatal care",
+      "answers": [
+        {
+          "label": "N",
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "Y",
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68492-8",
+      "localQuestionCode": "LiveBirth_29b",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date of last prenatal care visit",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68493-6",
+      "localQuestionCode": "LiveBirth_30",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Total number of prenatal visits for this pregnancy",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "3137-7",
+      "localQuestionCode": "LiveBirth_31",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Bdy height Measured",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "56077-1",
+      "localQuestionCode": "LiveBirth_32",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Weight pre current pregnancy",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "69461-2",
+      "localQuestionCode": "LiveBirth_33",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Weight at delivery Mother",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "11638-4",
+      "localQuestionCode": "LiveBirth_35a",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Births.still living",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68496-9",
+      "localQuestionCode": "LiveBirth_35b",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Now dead?",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68499-3",
+      "localQuestionCode": "LiveBirth_35c",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date of last live birth",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "69043-8",
+      "localQuestionCode": "LiveBirth_36a",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Number of other pregnancy outcomes",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68500-8",
+      "localQuestionCode": "LiveBirth_36b",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Date of last other pregnancy outcome",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "8665-2",
+      "localQuestionCode": "LiveBirth_39",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "LMP Start date",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73775-9",
+      "localQuestionCode": "LiveBirth_41",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Risk factors in this pregnancy",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA19978-8",
+          "text": "Diabetes prepregnancy",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA19979-6",
+          "text": "Diabetes gestatational",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA19980-4",
+          "text": "Hypertension prepregnancy",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA19981-2",
+          "text": "Hypertension gestational",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA19982-0",
+          "text": "Hypertension eclampsia",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20055-2",
+          "text": "Previous preterm birth",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20056-0",
+          "text": "Previous poor pregnancy outcome",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20057-8",
+          "text": "Infertility treatment",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20058-6",
+          "text": "Fertility-enhancing drugs, Artificial insemination or Intrauterine insemination",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20059-4",
+          "text": "Assisted reproductive technology",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20060-2",
+          "text": "Previous cesarean delivery",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9-3",
+          "text": "None of the abovef",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "68497-7",
+      "localQuestionCode": "LiveBirth_41fa",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Previous cesarean deliveries",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "72519-2",
+      "localQuestionCode": "LiveBirth_42",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Infections present &or treated during this pregnancy for live birth",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA10467-1",
+          "text": "Gonorrhea",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA16984-9",
+          "text": "Chlamydia",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA17003-7",
+          "text": "Syphilis",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18126-5",
+          "text": "Hepatitis B",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA19423-5",
+          "text": "Hepatitis C",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA19424-3",
+          "text": "None of the above listed infections were present and/or treated during this pregnancy",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73814-6",
+      "localQuestionCode": "LiveBirth_43",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Obstetric procedures performed",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20007-3",
+          "text": "Cervical cerclage",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20008-1",
+          "text": "Tocolysis",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20009-9",
+          "text": "External cephalic version",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9-3",
+          "text": "None of the abovef",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73820-3",
+      "localQuestionCode": "LiveBirth_43",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "External cephalic version was successful",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73774-2",
+      "localQuestionCode": "LiveBirth_44",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Onset of labor",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20068-5",
+          "text": "Premature rupture of membranes",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20069-3",
+          "text": "Precipitous labor",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20070-1",
+          "text": "Prolonged labor",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9-3",
+          "text": "None of the abovef",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73813-8",
+      "localQuestionCode": "LiveBirth_45",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Characteristics of labor and delivery",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20022-2",
+          "text": "Induction of labor",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20023-0",
+          "text": "Augmentation of labor",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20024-8",
+          "text": "Non-vertex presentation",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20025-5",
+          "text": "Steroids (glucocorticoids) for fetal lung maturation received by the mother prior to delivery",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20026-3",
+          "text": "Antibiotics received by the mother during labor",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20027-1",
+          "text": "Clinical chorioamnionitis diagnosed during labor or maternal temperature >38°C (100.4°F)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20028-9",
+          "text": "Moderate/heavy meconium staining of the amniotic fluid",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20029-7",
+          "text": "Fetal intolerance of labor such that one or more of the following actions was taken: in-utero resuscitative measures, further fetal assessment, or operative delivery",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20030-5",
+          "text": "Epidural or spinal anesthesia during labor",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9-3",
+          "text": "None of the abovef",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73761-9",
+      "localQuestionCode": "LiveBirth_46c",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Fetal presentation at birth",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA18948-2",
+          "text": "Breech",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA18949-0",
+          "text": "Cephalic",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA46-8",
+          "text": "Other",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73762-7",
+      "localQuestionCode": "LiveBirth_46d",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Final route and method of delivery",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20039-6",
+          "text": "Vaginal/Spontaneous",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20040-4",
+          "text": "Vaginal/Forceps",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20041-2",
+          "text": "Vaginal/Vacuum",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20042-0",
+          "text": "Cesarean",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73760-1",
+      "localQuestionCode": "LiveBirth_46dd",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "If cesarean, was a trial of labor attempted?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73781-7",
+      "localQuestionCode": "LiveBirth_47",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Maternal morbidity",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20044-6",
+          "text": "Maternal transfusion",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20045-3",
+          "text": "Third or fourth degree perineal laceration",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20046-1",
+          "text": "Ruptured uterus",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20047-9",
+          "text": "Unplanned hysterectomy",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20048-7",
+          "text": "Admission to intensive care unit",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20049-5",
+          "text": "Unplanned operating room procedure following delivery",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9-3",
+          "text": "None of the abovef",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "8339-4",
+      "localQuestionCode": "LiveBirth_49",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Birth weight Measured",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "11884-4",
+      "localQuestionCode": "LiveBirth_50",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "GA Clin est",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "9274-2",
+      "localQuestionCode": "LiveBirth_51",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "5M Apgar Score",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "9271-8",
+      "localQuestionCode": "LiveBirth_51",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "10M Apgar Score",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "57722-1",
+      "localQuestionCode": "LiveBirth_52",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Birth plurality",
+      "answers": [
+        {
+          "label": "5",
+          "code": "LA10137-0",
+          "text": "5",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "6",
+          "code": "LA10138-8",
+          "text": "6",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "7",
+          "code": "LA10139-6",
+          "text": "7",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "8",
+          "code": "LA10140-4",
+          "text": "8",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "9",
+          "code": "LA10141-2",
+          "text": "9",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "99",
+          "code": "LA12914-0",
+          "text": "Unknown plurality",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "10",
+          "code": "LA13942-0",
+          "text": "10",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "11",
+          "code": "LA14557-5",
+          "text": "11",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "12",
+          "code": "LA14558-3",
+          "text": "12",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "1",
+          "code": "LA6112-2",
+          "text": "1",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "2",
+          "code": "LA6113-0",
+          "text": "2",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "3",
+          "code": "LA6114-8",
+          "text": "3",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": "4",
+          "code": "LA6115-5",
+          "text": "4",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73773-4",
+      "localQuestionCode": "LiveBirth_52",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Number of infants in this delivery delivered alive",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73771-8",
+      "localQuestionCode": "LiveBirth_53",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Birth order",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA10137-0",
+          "text": "5",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10138-8",
+          "text": "6",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10139-6",
+          "text": "7",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10140-4",
+          "text": "8",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA10141-2",
+          "text": "9",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA13942-0",
+          "text": "10",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA14557-5",
+          "text": "11",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA14558-3",
+          "text": "12",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4720-4",
+          "text": "Not Applicable",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6112-2",
+          "text": "1",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6113-0",
+          "text": "2",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6114-8",
+          "text": "3",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA6115-5",
+          "text": "4",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73812-0",
+      "localQuestionCode": "LiveBirth_54",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Abnormal conditions of the newborn",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20015-6",
+          "text": "Assisted ventilation required immediately following delivery",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20016-4",
+          "text": "Assisted ventilation required for more than six hours",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20017-2",
+          "text": "NICU admission",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20018-0",
+          "text": "Newborn given surfactant replacement therapy",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20019-8",
+          "text": "Antibiotics received by the newborn for suspected neonatal sepsis",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20020-6",
+          "text": "Seizure or serious neurologic dysfunction",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20021-4",
+          "text": "Significant birth injury (skeletal fracture(s), peripheral nerve injury, and/or soft tissue/solid organ hemorrhage which requires intervention)",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9-3",
+          "text": "None of the abovef",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73780-9",
+      "localQuestionCode": "LiveBirth_55",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Congenital anomalies of the newborn",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA19590-1",
+          "text": "Gastroschisis",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA19591-9",
+          "text": "Omphalecele",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20078-4",
+          "text": "Anencephaly",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20079-2",
+          "text": "Meningomyelocele/Spina Bifida",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20080-0",
+          "text": "Cyanotic congenital heart disease",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20081-8",
+          "text": "Congenital diaphragmatic hernia",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20085-9",
+          "text": "Limb reduction defect",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20086-7",
+          "text": "Cleft Lip with or without Cleft Palate",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20087-5",
+          "text": "Cleft Palate alone",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20088-3",
+          "text": "Down syndrome",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20089-1",
+          "text": "Suspected chromosomal disorder",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20090-9",
+          "text": "Hypospadias",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA9-3",
+          "text": "None of the abovef",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73779-1",
+      "localQuestionCode": "LiveBirth_55j",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Down syndrome karyotype status",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20091-7",
+          "text": "Karyotype pending",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20092-5",
+          "text": "Karyotype confirmed",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73778-3",
+      "localQuestionCode": "LiveBirth_55k",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Suspected chromosomal disorder karyotype status",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20091-7",
+          "text": "Karyotype pending",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA20092-5",
+          "text": "Karyotype confirmed",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73758-5",
+      "localQuestionCode": "LiveBirth_56",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Was infant transferred within 24 hours of delivery?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73770-0",
+      "localQuestionCode": "LiveBirth_56",
+      "dataType": null,
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Name of facility infant transferred to",
+      "answers": null,
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73757-7",
+      "localQuestionCode": "LiveBirth_57",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Is infant living at the time of report?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA20052-9",
+          "text": "Infant transferred, status unknown",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    },
+    {
+      "questionCode": "73756-9",
+      "localQuestionCode": "LiveBirth_58",
+      "dataType": "CNE",
+      "header": false,
+      "units": null,
+      "formula": null,
+      "codingInstructions": null,
+      "copyrightNotice": null,
+      "questionCardinality": null,
+      "answerCardinality": null,
+      "question": "Is the infant being breastfed at discharge?",
+      "answers": [
+        {
+          "label": null,
+          "code": "LA32-8",
+          "text": "No",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA33-6",
+          "text": "Yes",
+          "score": null,
+          "other": null
+        },
+        {
+          "label": null,
+          "code": "LA4489-6",
+          "text": "Unknown",
+          "score": null,
+          "other": null
+        }
+      ],
+      "skipLogic": null,
+      "restrictions": null,
+      "editable": null,
+      "defaultAnswer": null,
+      "formatting": null,
+      "calculationMethod": null,
+      "parentQuestionCode": null
+    }
+  ]
+}
