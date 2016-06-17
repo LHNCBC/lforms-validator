@@ -21,7 +21,7 @@ module.exports = {
       ],
       "action": "show"
     },
-    "_initValue": {
+    "value": {
       "text": "No",
       "code": "false"
     }
@@ -89,7 +89,7 @@ module.exports = {
         "answers": "codingSystemC",
         "header": false,
         "codingInstructions": "Select \"LOINC\" to use LOINC codes, or create your own coding system by selecting \"Custom.\"",
-        "_initValue": {
+        "value": {
           "text": "LOINC",
           "code": "LOINC"
         }
@@ -137,7 +137,7 @@ module.exports = {
                 "value": "/^[0-9]+|\\*$/"
               }
             ],
-            "_initValue": "1"
+            "value": "1"
           },
           {
             "questionCode": "maxC",
@@ -151,7 +151,7 @@ module.exports = {
                 "value": "/^[0-9]+|\\*$/"
               }
             ],
-            "_initValue": "1"
+            "value": "1"
           }
         ]
       },
@@ -174,7 +174,7 @@ module.exports = {
           ],
           "action": "show"
         },
-        "_initValue": {
+        "value": {
           "text": "No",
           "code": "false"
         }
@@ -201,7 +201,7 @@ module.exports = {
           ],
           "action": "show"
         },
-        "_initValue": {
+        "value": {
           "text": "Editable",
           "code": "1"
         }
@@ -214,7 +214,7 @@ module.exports = {
         "header": false,
         "answers": "dataTypeC",
         "codingInstructions": "Enter the data type of the answer. Valid data types are:",
-        "_initValue": {
+        "value": {
           "text": "Text",
           "code": "ST"
         },
@@ -331,7 +331,7 @@ module.exports = {
               }
             ],
             "codingInstructions": "Enter the minimum number of times the answer must be given.  The value must always be > 0.",
-            "_initValue": "0"
+            "value": "0"
           },
           {
             "questionCode": "maxC",
@@ -345,7 +345,7 @@ module.exports = {
               }
             ],
             "codingInstructions": "Enter the maximum number of answers that can be given. Use \"*\" for infinite.",
-            "_initValue": "1"
+            "value": "1"
           }
         ]
       },

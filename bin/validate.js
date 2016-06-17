@@ -4,7 +4,14 @@ A command line application to use lforms-validator to input files/directories/ur
 var url = require('url');
 var http = require('http');
 var fs = require('fs');
-var LFormsValidator = require('./../lib/lforms-validator');
+var Q = require('q');
+var readFile = Q.denodeify(fs.readFile);
+
+var validator = require('tv4');
+validator.addSchema('validator');
+var formSchema = null;
+var itemSchema = null;
+var verbose = false;
 
 
 /**
@@ -13,6 +20,8 @@ var LFormsValidator = require('./../lib/lforms-validator');
  * @returns {undefined}
  */
 function processInput() {
+  "use strict";
+  var schemaPromise = null;
   var inputfiles = [];
   var inputstream = null;
   if ((process.argv.indexOf('--help') >= 0) ||
@@ -22,16 +31,28 @@ function processInput() {
     return;
   }
     
-  var validationOptions = {
-    verbose: false,
-    outStream: process.stdout,
-    isInputString: false
-  };
-
   var ind = process.argv.indexOf('-v');
   if (ind >= 0) {
     process.argv.splice(ind, 1);
-    validationOptions.verbose = true;
+    verbose = true;
+  }
+
+  var ind = process.argv.indexOf('-s');
+  if(ind < 0) {
+    ind = process.argv.indexOf('--schema');
+  }
+  if (ind >= 0) {
+    process.argv.splice(ind, 1);
+    schemaPromise = getJsonObject(process.argv[ind]).then((json) => {
+      formSchema = json;
+      validator.addSchema(formSchema.id, formSchema);
+      validator.getMissingUris().forEach((uri) => {
+        getJsonObject(uri).then((schema) => {
+          validator.addSchema(uri, schema); // uri should be equal to schema.id
+        });
+      });
+    });
+    process.argv.splice(ind, 1);
   }
 
   while (process.argv.length >= 3 && process.argv[2] !== '-') {
@@ -49,10 +70,7 @@ function processInput() {
     // Handle url
     var u = url.parse(inputfiles[0]);
     if (u && (u.protocol === 'http:' || u.protocol === 'https:')) {
-      validationOptions.source = inputfiles[0];
-      validation.validate(inputfiles[0], validationOptions);
-      var validation = new LFormsValidator(inputfiles[0], validationOptions);
-      runValidation(validation);
+      runValidation(inputfiles[0]).fail(logError).done();
     }
     else {
       // Handle files or directory
@@ -65,18 +83,20 @@ function processInput() {
         });
       }
       // Command line filelist or list from directory.
-      inputfiles.forEach(function (f) {
-        validationOptions.source = f;
-        var validation = new LFormsValidator(fs.createReadStream(f), validationOptions);
-        runValidation(validation);
-      });
+      var p = runValidation(inputfiles[0]).fail(logError);
+      
+      for (let i = 1; i < inputfiles.length; i++) {
+        p = p.then(() => {
+          return runValidation(inputfiles[i]).fail(logError);
+        });
+      }
+      p.done();
     }
   }
   else {
     if(inputstream) {
       // From input stream
-      var validation = new LFormsValidator(inputstream, validationOptions);
-      runValidation(validation);
+      runValidation(inputfiles[i]).fail(logError).done();
     }
     else {
       usage();
@@ -89,24 +109,39 @@ function processInput() {
  * Run validation on each object. Each invocation creates and sets up a domain to
  * facilitate simultaneous running of multiple validations.
  *
- * multiple validations
- *
- * @param {Object} validationObj - LFormsValidator object with its input and options set.
+ * @param {String|Object} dataSource - If string type it is data source url, otherwise input stream object.
  */
-function runValidation(validationObj) {
-  var d = require('domain').create();
-  d.on('error', function(err){
-    if(validationObj.verbose) {
-      console.log(err.stack);
+function runValidation(dataSource) {
+  return getJsonObject(dataSource).then((json) => {
+    "use strict";
+    var differed = Q.defer();
+    var ret = validator.validateResult(json, schema);
+    if(ret.valid) {
+      console.log(dataSource+': valid');
+      differed.resolve(ret);
     }
-    console.log(err.message);
+    else {
+      ret.error.message = dataSource+": "+ret.error.message;
+      differed.reject(ret.error);
+    }
+    return differed.promise;
   });
-
-  d.add(validationObj);
-  validationObj.validate();
 }
 
 
+function getJsonObject(filename) {
+  return readFile(filename, 'utf8').then((content) => {
+    return JSON.parse(content);
+  });
+}
+
+function logError(err) {
+  if(verbose) {
+    console.log(err.stack);
+  }
+
+  console.log(err.message+'; code: '+err.code+'; dataPath: '+err.dataPath+'; schemaPath: '+err.schemaPath);
+}
 /**
  * Usage clause
  */

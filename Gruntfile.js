@@ -9,11 +9,7 @@
 module.exports = function (grunt) {
 
   // Load grunt tasks automatically, when needed
-  require('jit-grunt')(grunt, {
-    jshint: 'grunt-contrib-jshint',
-    nsp: 'grunt-nsp',
-    jasmine_nodejs: 'grunt-jasmine-nodejs'
-  });
+  require('jit-grunt')(grunt);
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);

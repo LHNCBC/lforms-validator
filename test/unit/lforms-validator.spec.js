@@ -3,15 +3,19 @@
  */
 'use strict';
 var types = require('../../lib/widget-data-types');
-var LFormsValidator = require('../../lib/lforms-validator');
 var helper = require('./lforms-validator.helper');
 var valueList = require('../../lib/type-lists');
+var validator = require('tv4');
+ var formSchema = require('../../lforms-form-schema.json');
+var itemSchema = require('../../lforms-item-schema.json');
 
 
 describe('Should validate', function() {
-  var validator = new LFormsValidator();
+  validator.addSchema('lforms-form-schema.json', formSchema);
+  validator.addSchema('lforms-item-schema.json', itemSchema);
+  
   var formJsonString = JSON.stringify(helper.formBuilderForm);
-
+  
 
   it('formatting', function() {
     expect(function() {
@@ -26,73 +30,30 @@ describe('Should validate', function() {
     }).not.toThrow();
   });
 
-
-  it('templateOptions', function() {
-    expect(function() {
-      validator.validateDucktype(types.TemplateOptions, helper.formBuilderForm.templateOptions, '');
-    }).not.toThrow();
+  fit('templateOptions', function() {
+    expect(validator.validate(helper.formBuilderForm.templateOptions, formSchema.definitions.templateOptions)).toBeTruthy();
   });
 
-
-  it('dataType', function() {
-    expect(function() {validator.validateDataType('CNE', '');}).not.toThrow();
-    expect(function() {validator.validateDataType('XXX', ['YYY']);})
-      .toThrow(new Error('Invalid DataType at  [YYY]: XXX\nValid types are ' + valueList[types.DataType.name]));
-  });
-
-
-  it('skipLogic', function() {
+  fit('skipLogic', function() {
     var skipLogic = helper.skipLogic;
-    expect(function() {validator.validateSkipLogic(skipLogic, '');}).not.toThrow();
+    expect(validator.validate(skipLogic, itemSchema.definitions.skipLogic)).toBeTruthy();
     // Test for an invalid field
     skipLogic['XXX'] = 'aaaaaaa';
-    expect(function() {validator.validateSkipLogic(skipLogic, ['YYY']);})
-      .toThrow(new Error('Failed validation at  [YYY]: Unsupported fields [XXX] in '+types.SkipLogic.name));
+    expect(validator.validate(skipLogic, itemSchema.definitions.skipLogic)).toBeFalsy();
   });
 
-
-  it('Item', function() {
+  fit('Item', function() {
     var item = helper.item;
-    expect(function() {validator.validateItem(item, '');}).not.toThrow();
+    expect(validator.validate(item, itemSchema)).toBeTruthy();
     // Test for an invalid field
     item['XXX'] = 'aaaaaaaaaa';
-    expect(function() {validator.validateItem(item, ['YYY']);})
-      .toThrow(new Error('Failed validation at  [YYY]: Unsupported fields [XXX] in '+types.Item.name));
+    expect(validator.validate(item, itemSchema)).toBeFalsy();
   });
 
-  it('Form', function() {
+  fit('Form', function() {
     var form = helper.formBuilderForm;
-    expect(function() {validator.validateForm(form, '');}).not.toThrow();
+    expect(validator.validate(form, formSchema)).toBeTruthy();
     form['XXX'] = 'aaaaaaaaa';
-    expect(function() {validator.validateForm(form, ['YYY']);})
-      .toThrow(new Error('Failed validation at  [YYY]: Unsupported fields [XXX] in '+types.Form.name));
+    expect(validator.validate(form, formSchema)).toBeFalsy();
   });
-
-  describe('Form from file', function() {
-    var localValidator, success = false;
-
-
-    beforeEach(function(done) {
-      success = false;
-      localValidator = new LFormsValidator(formJsonString, {isInputString: true});
-      localValidator.on('done', function() {
-        success = true;
-        done();
-      });
-      localValidator.on('error', function(err) {
-        success = false;
-        done(err);
-      });
-      localValidator.validate();
-    });
-
-
-    it('should emit done', function() {
-      expect(success).toBeTruthy();
-    });
-  });
-
-
-
-
 });

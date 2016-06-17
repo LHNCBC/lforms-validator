@@ -1,0 +1,376 @@
+{
+  "id": "lforms-item-schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Schema for NLM LForms item format",
+  "type": "object",
+  "required": [
+    "question",
+    "questionCode"
+  ],
+  "properties": {
+    "comment": {
+      "description": "TODO: Not part of official spec, but found in some files.",
+      "type": "string"
+    },
+    "question": {
+      "description": "The label for the question, or the title of the section.",
+      "type": "string"
+    },
+    "questionCode": {
+      "description": "",
+      "type": "string"
+    },
+    "localQuestionCode": {
+      "description": "",
+      "type": "string"
+    },
+    "parentQuestionCode": {
+      "description": "",
+      "type": ["string", "null"]
+    },
+    "codingInstructions": {
+      "description": "",
+      "type": "string"
+    },
+    "externallyDefined": {
+      "description": "",
+      "type": "string",
+      "format": "uri"
+    },
+    "header": {
+      "description": "",
+      "type": "boolean"
+    },
+    "dataType": {
+      "$ref": "#/definitions/dataType"
+    },
+    "editable": {
+      "description": "",
+      "enum": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "calculationMethod": {
+      "description": "",
+      "$ref": "#/definitions/calculationMethod"
+    },
+    "questionCardinality": {
+      "description": "",
+      "$ref": "#/definitions/cardinality"
+    },
+    "answerCardinality": {
+      "description": "",
+      "$ref": "#/definitions/cardinality"
+    },
+    "answers": {
+      "description": "",
+      "$ref": "#/definitions/answers"
+    },
+    "defaultAnswer": {
+      "description": "",
+      "$ref": "#/definitions/defaultAnswer"
+    },
+    "items": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "lforms-item-schema"
+      }
+    },
+    "units": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/unit"
+      }
+    },
+    "restrictions": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/restriction"
+      }
+    },
+    "skipLogic": {
+      "$ref": "#/definitions/skipLogic"
+    },
+    "dataControl": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/dataControl"
+      }
+    },
+    "value": {
+      "description": "TODO: A temporary way of setting default value. This might be removed in future after implementing defaultValue",
+      "type": ["string", "object", "boolean", "number"]
+    }
+  },
+  "additionalProperties": false,
+
+
+  "definitions": {
+    "dataType": {
+      "description": "TODO: Temporarily allow NM, null to work with current data.",
+      "enum": [
+      "BL",
+      "TM",
+      "DT",
+      "DTM",
+      "REAL",
+      "EMAIL",
+      "INT",
+      "CNE",
+      "CWE",
+      "PHONE",
+      "RTO",
+      "ST",
+      "URL",
+      "YEAR",
+      null,
+      "NM"
+      ]
+    },
+    "cardinality": {
+      "description": "schema for cardinality",
+      "type": "object",
+      "properties": {
+        "min": {
+          "$ref": "#/definitions/cardinalityString"
+        },
+        "max": {
+          "$ref": "#/definitions/cardinalityString"
+        }
+      },
+      "additionalProperties": false
+    },
+    "cardinalityString": {
+      "type": "string",
+      "pattern": "^[0-9]+|\\*$"
+    },
+    "answer": {
+      "type": "object",
+      "required": [
+        "code",
+        "text"
+      ],
+      "properties": {
+        "code": {"type": "string"},
+        "text": {"type": "string"},
+        "label": {"type": "string"},
+        "score": {"type": "integer"},
+        "other": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "answers": {
+      "description": "",
+      "oneOf": [
+        {"type": "string"},
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/answer"
+          },
+          "uniqueItems": true
+        }
+      ]
+    },
+    "defaultAnswer": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/stringDefaultAnswer"
+        },
+        {
+          "$ref": "#/definitions/CNE_CWE_defaultAnswer"
+        }
+      ]
+    },
+    "stringDefaultAnswer": {
+      "type": "string"
+    },
+    "CNE_CWE_defaultAnswer": {
+      "type": "object",
+      "oneOf": [
+        {
+          "code": {"type": "string"}
+        },
+        {
+          "label": {"type": "string"}
+        }
+      ],
+      "additionalProperties": false
+    },
+    "calculationMethod": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "enum": ["BMI", "TOTALSCORE", "SELFDEF"]
+        },
+        "value": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "required": ["name"],
+      "additionalProperties": false
+    },
+    "unit": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "normalRange": {"$ref": "#/definitions/numericalRange"},
+        "default": { "type": "boolean" },
+        "code": {
+          "desciption": "TODO: temporary - code is not not defined in spec, but found in some test files. Remove after testing.",
+          "type": "integer"
+        }
+      },
+      "required": ["name"],
+      "additionalProperties": false
+    },
+    "numericalRange": {
+      "type": "object",
+      "properties": {
+        "minExclusive": {
+          "type": "number"
+        },
+        "minInclusive": {
+          "type": "number"
+        },
+        "maxExclusive": {
+          "type": "number"
+        },
+        "maxInclusive": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "restriction": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "enum": [
+            "minExclusive",
+            "maxExclusive",
+            "minInclusive",
+            "maxInclusive",
+            "totalDigits",
+            "fractionDigits",
+            "length",
+            "minLength",
+            "maxLength",
+            "enumeration",
+            "whiteSpace",
+            "pattern"
+          ]
+        },
+        "value": {
+          "type": ["number","string"]
+        },
+        "maxExclusive": {
+          "type": "number"
+        },
+        "maxInclusive": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "skipLogic": {
+      "type": "object",
+      "properties": {
+        "logic": {
+          "enum": [
+            "ALL",
+            "ANY"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/skipLogicCondition"
+          }
+        },
+        "action": {
+          "enum": ["show", "hide"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "skipLogicCondition": {
+      "type": "object",
+      "properties": {
+        "source": {"type": "string"},
+        "trigger": {
+          "type": "object",
+          "oneOf": [
+            {
+              "properties": {"code": {"type": ["string", "number", "boolean"]}},
+              "additionalProperties": false
+            },
+            {
+              "properties": {"label": {"type": "string"}},
+              "additionalProperties": false
+            },
+            {
+              "properties": {"value": {"$ref": "#/definitions/triggerValue"}},
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "triggerValue": {
+      "oneOf": [
+        {"type": ["number", "string"]},
+        {"$ref": "#/definitions/numericalRange"}
+      ]
+    },
+    "dataControl": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "object",
+          "properties": {
+            "sourceType": {"type": "string"},
+            "sourceDataType": {"type": "string"},
+            "itemCode": {"type": "string"},
+            "data": {"type": "string"}
+          },
+          "additionalProperties": false,
+          "required": ["sourceDataType", "itemCode", "data"]
+        },
+        "onAttribute": {"type": "string"}
+      },
+      "additionalProperties": false,
+      "required": ["source"]
+    },
+    "displayControl": {
+      "type": "object",
+      "properties": {
+        "css": {
+          "$ref": "#/definitions/cssDef"
+        },
+        "colCSS": {
+          "$ref": "#/definitions/cssDef"
+        },
+        "questionLayout": {"enum": ["vertical", "horizontal", "matrix"]},
+        "answerLayout": {"enum": ["combo", "list"]}
+      },
+      "additionalProperties": false
+    },
+    "cssDef": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}
+
