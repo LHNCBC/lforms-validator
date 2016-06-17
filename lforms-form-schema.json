@@ -62,7 +62,7 @@
           "type": "string"
         },
         "displayControl": {
-          "$ref": "lforms-item-schema.json#definitions/displayControl"
+          "$ref": "lforms-item-schema.json#/definitions/displayControl"
         }
       },
       "additionalProperties": false
@@ -72,16 +72,16 @@
       "properties": {
         "question": {"type": "string"},
         "dataType": {
-          "$ref": "lforms-item-schema.json#definitions/dataType"
+          "$ref": "lforms-item-schema.json#/definitions/dataType"
         },
         "displayControl": {
-          "$ref": "lforms-item-schema.json#definitions/displayControl"
+          "$ref": "lforms-item-schema.json#/definitions/displayControl"
         },
         "answerCardinality": {
-          "$ref": "lforms-item-schema.json#definitions/cardinality"
+          "$ref": "lforms-item-schema.json#/definitions/cardinality"
         },
         "answers": {
-          "$ref": "lforms-item-schema.json#definitions/answers"
+          "$ref": "lforms-item-schema.json#/definitions/answers"
         }
       },
       "additionalProperties": false
