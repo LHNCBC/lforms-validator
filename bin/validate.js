@@ -3,14 +3,15 @@ A command line application to use lforms-validator to input files/directories/ur
  */
 var url = require('url');
 var http = require('http');
+var https = require('https');
 var fs = require('fs');
 var Q = require('q');
 var readFile = Q.denodeify(fs.readFile);
+var httpGet = Q.denodeify(http.get);
+var httpsGet = Q.denodeify(https.get);
 
 var validator = require('tv4');
-validator.addSchema('validator');
-var formSchema = null;
-var itemSchema = null;
+var schema = null;
 var verbose = false;
 
 
@@ -43,14 +44,11 @@ function processInput() {
   }
   if (ind >= 0) {
     process.argv.splice(ind, 1);
-    schemaPromise = getJsonObject(process.argv[ind]).then((json) => {
-      formSchema = json;
-      validator.addSchema(formSchema.id, formSchema);
-      validator.getMissingUris().forEach((uri) => {
-        getJsonObject(uri).then((schema) => {
-          validator.addSchema(uri, schema); // uri should be equal to schema.id
-        });
-      });
+    schema = getJsonObjectSync(process.argv[ind]);
+    validator.addSchema(schema.id, schema);
+    validator.getMissingUris().forEach((uri) => {
+      var missedSchema = getJsonObjectSync(uri);
+      validator.addSchema(uri, missedSchema); // uri should be equal to schema.id
     });
     process.argv.splice(ind, 1);
   }
@@ -61,46 +59,23 @@ function processInput() {
   }
   
   if(inputfiles.length === 0) {
-    process.stdin.setEncoding('utf-8');
-    inputstream = process.stdin;
+    usage();
   }
 
-  // Input can be a http(s) url, file(s), directory or input stream
-  if (inputfiles && inputfiles.length > 0) {
-    // Handle url
-    var u = url.parse(inputfiles[0]);
-    if (u && (u.protocol === 'http:' || u.protocol === 'https:')) {
-      runValidation(inputfiles[0]).fail(logError).done();
+  var promise = null;
+  for (let file of inputfiles) {
+    if(promise == null) {
+      promise = runValidation(file).fail(logError);
     }
     else {
-      // Handle files or directory
-      if (fs.statSync(inputfiles[0]).isDirectory() === true) {
-        // list out all files in the directory
-        var dir = inputfiles[0];
-        inputfiles = fs.readdirSync(dir);
-        inputfiles = inputfiles.map(function (e) {
-          return dir + '/' + e;
-        });
-      }
-      // Command line filelist or list from directory.
-      var p = runValidation(inputfiles[0]).fail(logError);
-      
-      for (let i = 1; i < inputfiles.length; i++) {
-        p = p.then(() => {
-          return runValidation(inputfiles[i]).fail(logError);
-        });
-      }
-      p.done();
+      promise = promise.then(() => {
+        return runValidation(file).fail(logError);
+      });
     }
   }
-  else {
-    if(inputstream) {
-      // From input stream
-      runValidation(inputfiles[i]).fail(logError).done();
-    }
-    else {
-      usage();
-    }
+
+  if(promise) {
+    promise.done();
   }
 }
 
@@ -128,13 +103,81 @@ function runValidation(dataSource) {
   });
 }
 
-
+/**  Asynchronous retrieval of json object from a json file 
+ * @param filename - json file name
+ * 
+ * @return {Object} - Promise to retrieve json object.
+*/
 function getJsonObject(filename) {
-  return readFile(filename, 'utf8').then((content) => {
-    return JSON.parse(content);
-  });
+  var isUrl = url.parse(filename);
+  if(isUrl.protocol === 'http' || isUrl.protocol === 'https') {
+    return getHttpContent(filename).then((content) => {
+      "use strict";
+      return JSON.parse(content);
+    });
+  }
+  else {
+    return readFile(filename, 'utf8').then((content) => {
+      return JSON.parse(content);
+    });
+  }
 }
 
+
+/**
+ * Synchronous retrieval of json object from a json file.
+ * @param filename
+ */
+function getJsonObjectSync(filename) {
+  return JSON.parse(fs.readFileSync(filename, 'utf8'));
+}
+
+
+/**
+ * a utility to get content from a url source with GET method.
+ * @param {string} aUrl - http(s) url  
+ * @returns {Object} - A promise to resolve on successful content retrieval.
+ */
+function getHttpContent(aUrl) {
+  var deferred = Q.defer();
+  var isUrl = url.parse(aUrl);
+  var conn = null;
+  if(isUrl.protocol === 'https') {
+    conn = httpsGet;
+  }
+  else if(isUrl.protocol === 'http') {
+    var conn = httpGet;
+  }
+  else {
+    deferred.reject(new Error("Invalid input source"));
+  }
+
+  conn(aUrl).then((resp) => {
+    "use strict";
+    if(resp.statusCode !== 200) {
+      deferred.reject(new Error(aUrl+' returned http response code = '+ resp.statusCode));
+    }
+
+    var data = null;
+    resp.on('data', (chunk) => {
+      data =+ chunk;
+    });
+
+    resp.on('end', () => {
+      deferred.resolve(data);
+    });
+
+    resp.on('error', (e) => {
+      deferred.reject(e);
+    });
+  });
+  return deferred.promise;
+}
+
+/**
+ * Log error to console
+ * @param {Object} err - Error object. 
+ */
 function logError(err) {
   if(verbose) {
     console.log(err.stack);

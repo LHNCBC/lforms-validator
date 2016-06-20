@@ -103,6 +103,11 @@
         "$ref": "#/definitions/dataControl"
       }
     },
+
+    "displayControl": {
+      "$ref": "#/definitions/itemDisplayControl"
+    },
+
     "value": {
       "description": "TODO: A temporary way of setting default value. This might be removed in future after implementing defaultValue",
       "type": ["string", "object", "boolean", "number"]
@@ -350,21 +355,27 @@
       "additionalProperties": false,
       "required": ["source"]
     },
-    "displayControl": {
+    "itemDisplayControl": {
       "type": "object",
       "properties": {
         "css": {
-          "$ref": "#/definitions/cssDef"
+          "$ref": "#/definitions/css"
         },
         "colCSS": {
-          "$ref": "#/definitions/cssDef"
+          "$ref": "#/definitions/css"
         },
-        "questionLayout": {"enum": ["vertical", "horizontal", "matrix"]},
-        "answerLayout": {"enum": ["combo", "list"]}
+        "questionLayout": {"$ref": "#/definitions/questionLayout"},
+        "answerLayout": {"$ref": "#/definitions/answerLayout"}
       },
       "additionalProperties": false
     },
-    "cssDef": {
+    "questionLayout": {
+      "enum": ["vertical", "horizontal", "matrix"]
+    },
+    "answerLayout": {
+      "enum": ["combo", "list"]
+    },
+    "css": {
       "type": "array",
       "items": {
         "type": "object",

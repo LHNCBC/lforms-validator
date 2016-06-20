@@ -40,6 +40,15 @@
         "useAnimation": {"type": "boolean"},
         "obrHeader": {"type": "boolean"},
         "hideHeader": {"type": "boolean"},
+        "displayControl": {
+          "type": "object",
+          "properties": {
+            "questionLayout": {
+              "$ref": "#/definitions/questionLayout"
+            }
+          },
+          "additionalProperties": false
+        },
         "obxTableColumns": {
           "type": "array",
           "items": {
@@ -62,7 +71,13 @@
           "type": "string"
         },
         "displayControl": {
-          "$ref": "lforms-item-schema.json#/definitions/displayControl"
+          "type": "object",
+          "properties": {
+            "colCSS": {
+              "$ref": "lforms-item-schema.json#/definitions/css"
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
@@ -75,7 +90,16 @@
           "$ref": "lforms-item-schema.json#/definitions/dataType"
         },
         "displayControl": {
-          "$ref": "lforms-item-schema.json#/definitions/displayControl"
+          "type": "object",
+          "properties": {
+            "colCSS": {
+              "$ref": "lforms-item-schema.json#/definitions/css"
+            },
+            "css": {
+              "$ref": "lforms-item-schema.json#/definitions/css"
+            }
+          },
+          "additionalProperties": false
         },
         "answerCardinality": {
           "$ref": "lforms-item-schema.json#/definitions/cardinality"

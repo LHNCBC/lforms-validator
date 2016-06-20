@@ -1,11 +1,7 @@
 {
   "name": "lforms-validator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
-    "JSONPath": "^0.11.2",
-    "ducktype": "^1.1.0",
-    "lodash": "^4.5.1",
-    "oboe": "^2.1.2",
     "q": "^1.4.1",
     "tv4": "^1.2.7"
   },
@@ -23,14 +19,12 @@
     "jasmine-spec-reporter": "^2.4.0",
     "jit-grunt": "^0.10.0",
     "jshint-stylish": "^0.2.0",
-    "jsonschema": "^1.1.0",
     "load-grunt-tasks": "^0.4.0",
     "nsp": "^2.1.0",
-    "time-grunt": "^0.3.1",
-    "z-schema": "^3.17.0"
+    "time-grunt": "^0.3.1"
   },
   "engines": {
-    "node": ">=4.2.1"
+    "node": ">=6.2.1"
   },
   "scripts": {
     "test": "grunt test"
