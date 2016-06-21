@@ -13,7 +13,7 @@ var httpsGet = Q.denodeify(https.get);
 var validator = require('tv4');
 var schema = null;
 var verbose = false;
-
+var argv = null;
 
 /**
  * Program entry. Processes command line inputs and run validation.
@@ -22,54 +22,27 @@ var verbose = false;
  */
 function processInput() {
   "use strict";
-  var schemaPromise = null;
-  var inputfiles = [];
-  var inputstream = null;
-  if ((process.argv.indexOf('--help') >= 0) ||
-      (process.argv.indexOf('-h') >= 0) ||
-      (process.argv.length <= 2)) {
+  argv = require('minimist')(process.argv.slice(2));
+  if (argv.h || argv.help || argv._.length < 2) {
     usage();  
     return;
   }
-    
-  var ind = process.argv.indexOf('-v');
-  if (ind >= 0) {
-    process.argv.splice(ind, 1);
-    verbose = true;
-  }
 
-  var ind = process.argv.indexOf('-s');
-  if(ind < 0) {
-    ind = process.argv.indexOf('--schema');
-  }
-  if (ind >= 0) {
-    process.argv.splice(ind, 1);
-    schema = getJsonObjectSync(process.argv[ind]);
-    validator.addSchema(schema.id, schema);
-    validator.getMissingUris().forEach((uri) => {
-      var missedSchema = getJsonObjectSync(uri);
-      validator.addSchema(uri, missedSchema); // uri should be equal to schema.id
-    });
-    process.argv.splice(ind, 1);
-  }
-
-  while (process.argv.length >= 3 && process.argv[2] !== '-') {
-    inputfiles.push(process.argv[2]);
-    process.argv.splice(2, 1);
-  }
-  
-  if(inputfiles.length === 0) {
-    usage();
-  }
+  schema = getJsonObjectSync(argv._[0]);
+  validator.addSchema(schema.id, schema);
+  validator.getMissingUris().forEach((uri) => {
+    var missedSchema = getJsonObjectSync(uri);
+    validator.addSchema(uri, missedSchema); // uri should be equal to schema.id
+  });
 
   var promise = null;
-  for (let file of inputfiles) {
+  for (var i = 1; i < argv._.length; i++) {
     if(promise == null) {
-      promise = runValidation(file).fail(logError);
+      promise = runValidation(argv._[i]).fail(logError);
     }
     else {
       promise = promise.then(() => {
-        return runValidation(file).fail(logError);
+        return runValidation(argv._[i]).fail(logError);
       });
     }
   }
@@ -89,17 +62,17 @@ function processInput() {
 function runValidation(dataSource) {
   return getJsonObject(dataSource).then((json) => {
     "use strict";
-    var differed = Q.defer();
+    var deffered = Q.defer();
     var ret = validator.validateResult(json, schema);
     if(ret.valid) {
       console.log(dataSource+': valid');
-      differed.resolve(ret);
+      deffered.resolve(ret);
     }
     else {
       ret.error.message = dataSource+": "+ret.error.message;
-      differed.reject(ret.error);
+      deffered.reject(ret.error);
     }
-    return differed.promise;
+    return deffered.promise;
   });
 }
 
@@ -179,7 +152,7 @@ function getHttpContent(aUrl) {
  * @param {Object} err - Error object. 
  */
 function logError(err) {
-  if(verbose) {
+  if(argv.v) {
     console.log(err.stack);
   }
 
@@ -189,14 +162,14 @@ function logError(err) {
  * Usage clause
  */
 function usage() {
-  console.log('Usage: ' + process.argv[0] + ' ' + process.argv[1] + ' [options...] <input file/url>');
+  console.log('Usage: ' + process.argv[0] + ' ' + process.argv[1] + ' [options...] <schema file/url> <input file/url>');
   console.log('Options:');
   console.log('  -h/--help\tThis help message');
   console.log('  -v\t\tVerbose output');
   console.log('');
+  console.log('\<schema file/url\>\tSpecify location of schema file/url to validate the json.');
   console.log('\<input file/url\>\tSpecify location of lforms json resource. The valid inputs are');
   console.log('                \tan http(s) url, file path, or directory path');
-  console.log('                \tYou may also use \'-\' to read from standard input.');
 }
 
 

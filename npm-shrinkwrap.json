@@ -1,6 +1,6 @@
 {
   "name": "lforms-validator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "abbrev": {
       "version": "1.0.9",
@@ -405,9 +405,9 @@
       }
     },
     "glob": {
-      "version": "7.0.4",
+      "version": "7.0.5",
       "from": "glob@>=7.0.0 <7.1.0",
-      "resolved": "https://registry.npmjs.org/glob/-/glob-7.0.4.tgz"
+      "resolved": "https://registry.npmjs.org/glob/-/glob-7.0.5.tgz"
     },
     "globule": {
       "version": "0.2.0",
@@ -1739,11 +1739,6 @@
       "from": "jsonfile@>=2.1.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-2.3.1.tgz"
     },
-    "JSONPath": {
-      "version": "0.11.2",
-      "from": "JSONPath@>=0.11.2 <0.12.0",
-      "resolved": "https://registry.npmjs.org/JSONPath/-/JSONPath-0.11.2.tgz"
-    },
     "jsonpointer": {
       "version": "2.0.0",
       "from": "jsonpointer@2.0.0",
@@ -1848,7 +1843,7 @@
     },
     "minimist": {
       "version": "1.2.0",
-      "from": "minimist@^1.1.3",
+      "from": "minimist@>=1.2.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz"
     },
     "mkdirp": {
