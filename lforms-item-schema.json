@@ -10,7 +10,7 @@
   "properties": {
     "comment": {
       "description": "TODO: Not part of official spec, but found in some files.",
-      "type": "string"
+      "type": ["string", "null"]
     },
     "question": {
       "description": "The label for the question, or the title of the section.",
@@ -22,7 +22,7 @@
     },
     "localQuestionCode": {
       "description": "",
-      "type": "string"
+      "type": ["string", "null"]
     },
     "parentQuestionCode": {
       "description": "",
@@ -30,11 +30,15 @@
     },
     "codingInstructions": {
       "description": "",
-      "type": "string"
+      "type": ["string", "null"]
+    },
+    "copyrightNotice": {
+      "description": "",
+      "type": ["string", "null"]
     },
     "externallyDefined": {
       "description": "",
-      "type": "string",
+      "type": ["string", "null"],
       "format": "uri"
     },
     "header": {
@@ -49,7 +53,8 @@
       "enum": [
         "0",
         "1",
-        "2"
+        "2",
+        null
       ]
     },
     "calculationMethod": {
@@ -66,7 +71,12 @@
     },
     "answers": {
       "description": "",
-      "$ref": "#/definitions/answers"
+      "type": ["array", "null"],
+      "items": {
+        "$ref": "#/definitions/answer"
+      },
+      "uniqueItems": true,
+      "additionalProperties": false
     },
     "defaultAnswer": {
       "description": "",
@@ -74,21 +84,21 @@
     },
     "items": {
       "description": "",
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "$ref": "lforms-item-schema"
       }
     },
     "units": {
       "description": "",
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "$ref": "#/definitions/unit"
       }
     },
     "restrictions": {
       "description": "",
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "$ref": "#/definitions/restriction"
       }
@@ -98,7 +108,7 @@
     },
     "dataControl": {
       "description": "",
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "$ref": "#/definitions/dataControl"
       }
@@ -110,7 +120,7 @@
 
     "value": {
       "description": "TODO: A temporary way of setting default value. This might be removed in future after implementing defaultValue",
-      "type": ["string", "object", "boolean", "number"]
+      "type": ["string", "object", "boolean", "number", "null"]
     }
   },
   "additionalProperties": false,
@@ -170,19 +180,6 @@
       },
       "additionalProperties": false
     },
-    "answers": {
-      "description": "",
-      "oneOf": [
-        {"type": "string"},
-        {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/answer"
-          },
-          "uniqueItems": true
-        }
-      ]
-    },
     "defaultAnswer": {
       "oneOf": [
         {
@@ -226,12 +223,13 @@
       "type": "object",
       "properties": {
         "name": { "type": "string" },
-        "normalRange": {"$ref": "#/definitions/numericalRange"},
-        "default": { "type": "boolean" },
-        "code": {
-          "desciption": "TODO: temporary - code is not not defined in spec, but found in some test files. Remove after testing.",
-          "type": "integer"
-        }
+        "normalRange": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/definitions/numericalRange"}
+          ]
+        },
+        "default": { "type": "boolean" }
       },
       "required": ["name"],
       "additionalProperties": false
@@ -342,7 +340,7 @@
         "source": {
           "type": "object",
           "properties": {
-            "sourceType": {"type": "string"},
+            "sourceType": {"type": ["string", "null"]},
             "sourceDataType": {"type": "string"},
             "itemCode": {"type": "string"},
             "data": {"type": "string"}
@@ -350,7 +348,7 @@
           "additionalProperties": false,
           "required": ["sourceDataType", "itemCode", "data"]
         },
-        "onAttribute": {"type": "string"}
+        "onAttribute": {"type": ["string", "null"]}
       },
       "additionalProperties": false,
       "required": ["source"]

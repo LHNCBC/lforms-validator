@@ -22,7 +22,6 @@
       }
     }
   },
-  "additionalProperties": false,
   "required": [
     "name",
     "items"
@@ -41,22 +40,22 @@
         "obrHeader": {"type": "boolean"},
         "hideHeader": {"type": "boolean"},
         "displayControl": {
-          "type": "object",
+          "type": ["object", "null"],
           "properties": {
             "questionLayout": {
-              "$ref": "#/definitions/questionLayout"
+              "$ref": "lforms-item-schema.json#/definitions/questionLayout"
             }
           },
           "additionalProperties": false
         },
         "obxTableColumns": {
-          "type": "array",
+          "type": ["array", "null"],
           "items": {
             "$ref": "#/definitions/obxTableColumn"
           }
         },
         "obrItems": {
-          "type": "array",
+          "type": ["array", "null"],
           "items": {
             "$ref": "#/definitions/obrItem"
           }
@@ -68,13 +67,16 @@
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "displayControl": {
-          "type": "object",
+          "type": ["object", "null"],
           "properties": {
             "colCSS": {
-              "$ref": "lforms-item-schema.json#/definitions/css"
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
+              ]
             }
           },
           "additionalProperties": false
@@ -87,25 +89,40 @@
       "properties": {
         "question": {"type": "string"},
         "dataType": {
-          "$ref": "lforms-item-schema.json#/definitions/dataType"
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "lforms-item-schema.json#/definitions/dataType"}
+          ]
         },
         "displayControl": {
           "type": "object",
           "properties": {
             "colCSS": {
-              "$ref": "lforms-item-schema.json#/definitions/css"
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
+              ]
             },
             "css": {
-              "$ref": "lforms-item-schema.json#/definitions/css"
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
+              ]
             }
           },
           "additionalProperties": false
         },
         "answerCardinality": {
-          "$ref": "lforms-item-schema.json#/definitions/cardinality"
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "lforms-item-schema.json#/definitions/cardinality"}
+          ]
         },
         "answers": {
-          "$ref": "lforms-item-schema.json#/definitions/answers"
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "lforms-item-schema.json#/definitions/answers"}
+          ]
         }
       },
       "additionalProperties": false

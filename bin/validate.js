@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 A command line application to use lforms-validator to input files/directories/urls etc.
  */
@@ -21,7 +23,6 @@ var argv = null;
  * @returns {undefined}
  */
 function processInput() {
-  "use strict";
   argv = require('minimist')(process.argv.slice(2));
   if (argv.h || argv.help || argv._.length < 2) {
     usage();  
@@ -61,7 +62,6 @@ function processInput() {
  */
 function runValidation(dataSource) {
   return getJsonObject(dataSource).then((json) => {
-    "use strict";
     var deffered = Q.defer();
     var ret = validator.validateResult(json, schema);
     if(ret.valid) {
@@ -85,7 +85,6 @@ function getJsonObject(filename) {
   var isUrl = url.parse(filename);
   if(isUrl.protocol === 'http' || isUrl.protocol === 'https') {
     return getHttpContent(filename).then((content) => {
-      "use strict";
       return JSON.parse(content);
     });
   }
@@ -119,19 +118,18 @@ function getHttpContent(aUrl) {
     conn = httpsGet;
   }
   else if(isUrl.protocol === 'http') {
-    var conn = httpGet;
+    conn = httpGet;
   }
   else {
     deferred.reject(new Error("Invalid input source"));
   }
 
   conn(aUrl).then((resp) => {
-    "use strict";
     if(resp.statusCode !== 200) {
       deferred.reject(new Error(aUrl+' returned http response code = '+ resp.statusCode));
     }
 
-    var data = null;
+    var data = "";
     resp.on('data', (chunk) => {
       data =+ chunk;
     });

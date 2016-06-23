@@ -7,13 +7,55 @@ var validator = require('tv4');
  var formSchema = require('../../lforms-form-schema.json');
 var itemSchema = require('../../lforms-item-schema.json');
 
+var matchers = {
+  /**
+   * Matcher to validate validator's result object
+   * and display custom message on failure.
+   *
+   * @returns {{compare: compare}}
+   */
+  toBeValid: function () {
+
+    return {
+      /**
+       * Jasmine's call back function to customize the comparison expected and actual values. 
+       * 
+       * @param actual - Actual value passed to expect()
+       * @param expected - Expected value, usually passed to matcher, as our matcher is 
+       * with out parameters.
+       * @returns {Object} - The keys are pass and message. 
+       *   pass: A boolean flag to indicate if the test passed or not.
+       *   message: A string to display when the expectation fails. Set the 
+       *     message for both values of pass to cover negative expectation.
+       */
+      compare: function (actual, expected) {
+        var result = {};
+
+        result.pass = actual.valid;
+        if(result.pass) {
+          result.message = "Expected not to be valid";
+        }
+        else {
+          delete actual.stack;
+          result.message = "Expected to be valid: "+JSON.stringify(actual, null, 2);
+        }
+
+        return result;
+      }
+    };
+  }
+};
+
+
 
 describe('Should validate', function() {
   validator.addSchema('lforms-form-schema.json', formSchema);
   validator.addSchema('lforms-item-schema.json', itemSchema);
   
-  var formJsonString = JSON.stringify(helper.formBuilderForm);
-  
+  beforeEach(function () {
+    // Add custom matchers. They are torn down after every it(). 
+    jasmine.addMatchers(matchers);
+  });
 
   it('displayControl', function() {
     expect(validator.validate(helper.templateOptions.obxTableColumns[0].displayControl, formSchema.definitions.obxTableColumn.properties.displayControl)).toBeTruthy();
@@ -38,16 +80,15 @@ describe('Should validate', function() {
 
   it('Item', function() {
     var item = helper.item;
-    expect(validator.validate(item, itemSchema)).toBeTruthy();
+    expect(validator.validateResult(item, itemSchema)).toBeValid();
     // Test for an invalid field
     item['XXX'] = 'aaaaaaaaaa';
-    expect(validator.validate(item, itemSchema)).toBeFalsy();
+    expect(validator.validateResult(item, itemSchema)).not.toBeValid();
   });
 
   it('Form', function() {
-    var form = helper.formBuilderForm;
-    expect(validator.validate(form, formSchema)).toBeTruthy();
-    form['XXX'] = 'aaaaaaaaa';
-    expect(validator.validate(form, formSchema)).toBeFalsy();
+    // Use custom matcher.
+    //expect(validator.validateResult(helper.formBuilderForm, formSchema)).toBeValid();
+    expect(validator.validateResult(helper.glasgow, formSchema)).toBeValid();
   });
 });
