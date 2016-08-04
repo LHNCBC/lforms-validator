@@ -4,8 +4,8 @@
 'use strict';
 var helper = require('./lforms-validator.helper');
 var validator = require('tv4');
- var formSchema = require('../../lforms-form-schema.json');
-var itemSchema = require('../../lforms-item-schema.json');
+ var formSchema = require('../../lforms-form-schema-v0.1.0.json');
+var itemSchema = require('../../lforms-item-schema-v0.1.0.json');
 
 var matchers = {
   /**
@@ -49,8 +49,8 @@ var matchers = {
 
 
 describe('Should validate', function() {
-  validator.addSchema('lforms-form-schema.json', formSchema);
-  validator.addSchema('lforms-item-schema.json', itemSchema);
+  validator.addSchema('lforms-form-schema-v0.1.0.json', formSchema);
+  validator.addSchema('lforms-item-schema-v0.1.0.json', itemSchema);
   
   beforeEach(function () {
     // Add custom matchers. They are torn down after every it(). 
