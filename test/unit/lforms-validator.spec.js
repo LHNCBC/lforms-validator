@@ -2,10 +2,14 @@
  * Created by akanduru on 9/16/15.
  */
 'use strict';
-var helper = require('./lforms-validator.helper');
-var validator = require('tv4');
- var formSchema = require('../../lforms-form-schema-v0.1.0.json');
-var itemSchema = require('../../lforms-item-schema-v0.1.0.json');
+
+if (typeof require !== 'undefined' && require.main !== module) { // i.e. if it was required
+  var helper = require('./../helpers/lforms-validator.helper.js');
+  var LForms = require('../../validator');
+}
+
+var formSchemaUrl = './lforms-form-schema.json';
+var itemSchemaUrl = 'lforms-item-schema.json';
 
 var matchers = {
   /**
@@ -49,14 +53,22 @@ var matchers = {
 
 
 describe('Should validate', function() {
-  validator.addSchema('lforms-form-schema-v0.1.0.json', formSchema);
-  validator.addSchema('lforms-item-schema-v0.1.0.json', itemSchema);
+  var validator = null;
+  var formSchema, itemSchema = null;
   
-  beforeEach(function () {
-    // Add custom matchers. They are torn down after every it(). 
+  beforeAll(function (done) {
+    // Add custom matchers. 
     jasmine.addMatchers(matchers);
+    
+    validator = new LForms.Validator();
+    setTimeout(function () {
+      var tv4 = validator.getValidatorObj();
+      formSchema = tv4.getSchema(formSchemaUrl);
+      itemSchema = tv4.getSchema(itemSchemaUrl);
+      done();
+    }, 1000);
   });
-
+  
   it('displayControl', function() {
     expect(validator.validate(helper.templateOptions.obxTableColumns[0].displayControl, formSchema.definitions.obxTableColumn.properties.displayControl)).toBeTruthy();
   });
@@ -87,8 +99,6 @@ describe('Should validate', function() {
   });
 
   it('Form', function() {
-    // Use custom matcher.
-    //expect(validator.validateResult(helper.formBuilderForm, formSchema)).toBeValid();
-    expect(validator.validateResult(helper.glasgow, formSchema)).toBeValid();
+    expect(validator.validateForm(helper.glasgow)).toBeValid();
   });
 });

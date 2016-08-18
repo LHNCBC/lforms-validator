@@ -1,5 +1,5 @@
 {
-  "id": "lforms-item-schema-v0.1.0#",
+  "id": "lforms-item-schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "Schema for NLM LForms item format",
   "type": "object",

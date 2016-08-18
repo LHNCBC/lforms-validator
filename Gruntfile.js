@@ -30,11 +30,100 @@ module.exports = function (grunt) {
       shrinkwrap: grunt.file.readJSON('./npm-shrinkwrap.json')
     },
 
+    // Watches files for changes and runs tasks based on the changed files
+    watch: {
+      bower: {
+        files: ['bower.json'],
+        tasks: ['wiredep']
+      },
+      js: {
+        files: ['<%= yeoman.app %>/{,*/}*.js'],
+        tasks: ['newer:jshint:all'],
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        }
+      },
+      jsTest: {
+        files: ['test/**/{,*/}*.js'],
+        tasks: ['newer:jshint:test']
+      },
+      gruntfile: {
+        files: ['Gruntfile.js']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+          '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
+      }
+    },
+
+    // The actual grunt server settings
+    connect: {
+      options: {
+        port: 9060,
+        // Change this to '0.0.0.0' to access the server from outside.
+        //hostname: 'localhost',
+        hostname: '0.0.0.0',
+        livereload: 35760
+      },
+      livereload: {
+        options: {
+          open: true,
+          middleware: function (connect) {
+            var serveStatic = require('serve-static');
+            return [
+              connect().use(
+                '/bower_components',
+                serveStatic('./bower_components')
+              ),
+              serveStatic('./test'),
+              serveStatic(appConfig.app),
+              connect().use(require('morgan')('combined'))
+            ];
+          }
+        }
+      },
+      test: {
+        options: {
+          port: 9061,
+          middleware: function (connect) {
+            var serveStatic = require('serve-static');
+            return [
+              serveStatic('./test'),
+              connect().use(
+                '/bower_components',
+                serveStatic('./bower_components')
+              ),
+              serveStatic(appConfig.app)
+            ];
+          }
+        }
+      }
+    },
+    
+    jasmine: {
+      validator: {
+        src: 'validator.js',
+        options: {
+          specs: 'test/unit/*.spec.js',
+          helpers: 'test/helpers/*.helper.js',
+          host: 'http://localhost:9061',
+          keepRunner: true,
+          template: 'test/spec-runner-tmpl.html',
+          outfile: 'test/index.html'
+        }
+      }
+    },
+
     jasmine_nodejs: {
       // task specific (default) options
       options: {
-        specNameSuffix: "spec.js", // also accepts an array
-        helperNameSuffix: "helper.js",
+        specNameSuffix: ".spec.js", // also accepts an array
+        helperNameSuffix: ".helper.js",
         useHelpers: false,
         stopOnFailure: false,
         // configure one or more built-in reporters
@@ -60,16 +149,38 @@ module.exports = function (grunt) {
           "test/unit/**"
         ],
         helpers: [
-          "test/unit/**"
+          "test/helpers/**"
         ]
       }
+    },
+
+    // Automatically inject Bower components into the app
+    wiredep: {
+      app: {
+        src: ['<%= yeoman.app %>/test/spec-runner-tmpl.html'],
+        devDependencies: true
+      }
     }
+
+
+
+  });
+
+  grunt.registerTask('serve', 'Compile then start a connect web server', function () {
+    grunt.task.run([
+      'wiredep',
+      'connect:livereload',
+      'watch'
+    ]);
   });
 
 
   grunt.registerTask('test', [
     'nsp',
-    'jasmine_nodejs'
+    'wiredep',
+    'jasmine_nodejs',
+    'connect:test',
+    'jasmine'
   ]);
 
   grunt.registerTask('default', [

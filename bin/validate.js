@@ -23,12 +23,16 @@ var argv = null;
  * @returns {undefined}
  */
 function processInput() {
-  argv = require('minimist')(process.argv.slice(2));
+  argv = require('minimist')(process.argv.slice(2), {boolean: true});
   if (argv.h || argv.help || argv._.length < 2) {
     usage();  
     return;
   }
 
+  if(argv.v) {
+    verbose = true;
+  }
+  
   schema = getJsonObjectSync(argv._[0]);
   validator.addSchema(schema.id, schema);
   validator.getMissingUris().forEach((uri) => {

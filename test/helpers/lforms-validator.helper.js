@@ -1,7 +1,7 @@
 /**
  * Created by akanduru on 2/24/16.
  */
-module.exports = {
+var helper = {
   item: {
     "comment": "*********** header ************************",
     "question": "Section",
@@ -112,3 +112,8 @@ module.exports = {
     ]
   }
 };
+
+if (typeof require !== 'undefined' && require.main !== module) { // i.e. if it was required
+  module.exports = helper;
+}
+

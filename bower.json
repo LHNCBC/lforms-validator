@@ -1,0 +1,26 @@
+{
+  "name": "lforms-validator",
+  "description": "This package defines the json schema for lforms form definition.",
+  "main": "",
+  "authors": [
+    "Kanduru",
+    "Ajay (NIH/NLM/LHC) [C] <akanduru@mail.nih.gov>"
+  ],
+  "license": "NIH license",
+  "keywords": [
+    "lforms json schema"
+  ],
+  "moduleType": [],
+  "homepage": "http://lhncbc.github.io/lforms/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tv4": "~1.2.7"
+  }
+}

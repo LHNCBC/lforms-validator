@@ -1,5 +1,5 @@
 {
-  "id": "lforms-form-schema-v0.1.0#",
+  "id": "lforms-form-schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
@@ -18,7 +18,7 @@
     "items": {
       "type": "array",
       "items": {
-        "$ref": "lforms-item-schema-v0.1.0.json"
+        "$ref": "lforms-item-schema.json"
       }
     }
   },
@@ -43,7 +43,7 @@
           "type": ["object", "null"],
           "properties": {
             "questionLayout": {
-              "$ref": "lforms-item-schema-v0.1.0.json#/definitions/questionLayout"
+              "$ref": "lforms-item-schema.json#/definitions/questionLayout"
             }
           },
           "additionalProperties": false
@@ -75,7 +75,7 @@
             "colCSS": {
               "oneOf": [
                 {"type": "null"},
-                {"$ref": "lforms-item-schema-v0.1.0.json#/definitions/css"}
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
               ]
             }
           },
@@ -91,7 +91,7 @@
         "dataType": {
           "oneOf": [
             {"type": "null"},
-            {"$ref": "lforms-item-schema-v0.1.0.json#/definitions/dataType"}
+            {"$ref": "lforms-item-schema.json#/definitions/dataType"}
           ]
         },
         "displayControl": {
@@ -100,13 +100,13 @@
             "colCSS": {
               "oneOf": [
                 {"type": "null"},
-                {"$ref": "lforms-item-schema-v0.1.0.json#/definitions/css"}
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
               ]
             },
             "css": {
               "oneOf": [
                 {"type": "null"},
-                {"$ref": "lforms-item-schema-v0.1.0.json#/definitions/css"}
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
               ]
             }
           },
@@ -115,13 +115,13 @@
         "answerCardinality": {
           "oneOf": [
             {"type": "null"},
-            {"$ref": "lforms-item-schema-v0.1.0.json#/definitions/cardinality"}
+            {"$ref": "lforms-item-schema.json#/definitions/cardinality"}
           ]
         },
         "answers": {
           "oneOf": [
             {"type": "null"},
-            {"$ref": "lforms-item-schema-v0.1.0.json#/definitions/answers"}
+            {"$ref": "lforms-item-schema.json#/definitions/answers"}
           ]
         }
       },
