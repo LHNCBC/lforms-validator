@@ -3,6 +3,7 @@
  */
 'use strict';
 
+// Load the modules for node environment. In browser they are loaded with script tags.
 if (typeof require !== 'undefined' && require.main !== module) { // i.e. if it was required
   var helper = require('./../helpers/lforms-validator.helper.js');
   var LForms = require('../../validator');
@@ -61,6 +62,7 @@ describe('Should validate', function() {
     jasmine.addMatchers(matchers);
     
     validator = new LForms.Validator();
+    // In browser, schema files are loaded asynchronously. Give some pause. 
     setTimeout(function () {
       var tv4 = validator.getValidatorObj();
       formSchema = tv4.getSchema(formSchemaUrl);
