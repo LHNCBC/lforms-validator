@@ -112,9 +112,7 @@ module.exports = function (grunt) {
           specs: 'test/unit/*.spec.js',
           helpers: 'test/helpers/*.helper.js',
           host: 'http://localhost:9061',
-          keepRunner: true,
-          template: 'test/spec-runner-tmpl.html',
-          outfile: 'test/index.html'
+          vendor: ['/bower_components/tv4/tv4.js']
         }
       }
     },
