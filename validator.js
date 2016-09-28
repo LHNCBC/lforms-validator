@@ -103,9 +103,9 @@ else {
   
   /**
    * Gives more details about why the validation failed.
-   * 
-   * @param json
-   * @param schemaPart
+   *
+   * @param json - input object to validate
+   * @param schemaPart - Part of schema to validate.
    * @returns {Object} - Object with details on result of validation.
    */
   LForms.Validator.prototype.validateResult = function(json, schemaPart) {

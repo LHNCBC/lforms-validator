@@ -2,7 +2,11 @@
   "name": "lforms-validator",
   "version": "0.1.0",
   "description": "This package defines the json schema for lforms form definition.",
-  "main": "",
+  "main": [
+    "lforms-form-schema.json",
+    "lforms-item-schema.json",
+    "validator.js"
+  ],
   "authors": [
     "Kanduru",
     "Ajay (NIH/NLM/LHC) [C] <akanduru@mail.nih.gov>"
