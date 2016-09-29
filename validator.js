@@ -123,12 +123,6 @@ else {
     return this.validator.validateResult(form, this.validator.getSchema(schemaUri));
   };
 
-  /**
-   * Synchronous retrieval of json object from a json file.
-   * @param filename
-   */
-
-
 }).call(this);
 
 

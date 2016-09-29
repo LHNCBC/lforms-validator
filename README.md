@@ -1,4 +1,4 @@
-This package includes JSON Schema files which define the structure of [LForms data object](https://github.com/lhncbc/lforms/blob/master/form_definition.md).
+This package includes JSON Schema files which define the structure of an [LForms data object](https://github.com/lhncbc/lforms/blob/master/form_definition.md).
 It has a small javascript library to validate the structure programmatically. 
 
 The schema definitions use [JSON Schema](http://json-schema.org) version 4 standard. 
