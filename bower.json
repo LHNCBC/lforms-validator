@@ -4,7 +4,6 @@
   "description": "This package defines the json schema for lforms form definition.",
   "main": [
     "lforms-form-schema.json",
-    "lforms-item-schema.json",
     "validator.js"
   ],
   "authors": [
