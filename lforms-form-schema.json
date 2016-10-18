@@ -1,0 +1,131 @@
+{
+  "id": "lforms-form-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "templateOptions": {
+      "$ref": "#/definitions/templateOptions"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "lforms-item-schema.json"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "items"
+  ],
+  "definitions": {
+    "templateOptions": {
+      "type": "object",
+      "properties": {
+        "showQuestionCode": {"type": "boolean"},
+        "showCodingInstruction": {"type": "boolean"},
+        "tabOnInputFieldsOnly": {"type": "boolean"},
+        "hideCheckBoxes": {"type": "boolean"},
+        "allowMultipleEmptyRepeatingItems": {"type": "boolean"},
+        "allowHTMLInstructions": {"type": "boolean"},
+        "useAnimation": {"type": "boolean"},
+        "obrHeader": {"type": "boolean"},
+        "hideHeader": {"type": "boolean"},
+        "displayControl": {
+          "type": ["object", "null"],
+          "properties": {
+            "questionLayout": {
+              "$ref": "lforms-item-schema.json#/definitions/questionLayout"
+            }
+          },
+          "additionalProperties": false
+        },
+        "obxTableColumns": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/obxTableColumn"
+          }
+        },
+        "obrItems": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/obrItem"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "obxTableColumn": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": ["string", "null"]
+        },
+        "displayControl": {
+          "type": ["object", "null"],
+          "properties": {
+            "colCSS": {
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "obrItem": {
+      "type": "object",
+      "properties": {
+        "question": {"type": "string"},
+        "dataType": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "lforms-item-schema.json#/definitions/dataType"}
+          ]
+        },
+        "displayControl": {
+          "type": "object",
+          "properties": {
+            "colCSS": {
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
+              ]
+            },
+            "css": {
+              "oneOf": [
+                {"type": "null"},
+                {"$ref": "lforms-item-schema.json#/definitions/css"}
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "answerCardinality": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "lforms-item-schema.json#/definitions/cardinality"}
+          ]
+        },
+        "answers": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "lforms-item-schema.json#/definitions/answers"}
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
