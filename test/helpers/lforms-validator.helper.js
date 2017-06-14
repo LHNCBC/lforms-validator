@@ -6,6 +6,8 @@ var helper = {
     "comment": "*********** header ************************",
     "question": "Section",
     "questionCode": "headerC",
+    "questionCodeSystem": "LOINC",
+    "answerCodeSystem": "LOINC",
     "dataType": "CNE",
     "header": false,
     "answers": null,
