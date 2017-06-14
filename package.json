@@ -1,6 +1,6 @@
 {
   "name": "lforms-validator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "minimist": "^1.2.0",
     "q": "^1.4.1",
